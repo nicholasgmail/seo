@@ -1,0 +1,38 @@
+#конфиграцыя порта
+PORT: 8080
+
+#конфигурацыя совместиности браузеров
+COMPATIBILITY:
+    - 'last 2 versions'
+    - 'ie >= 9'
+    - 'android >= 4.4'
+    - 'ios >= 7'
+
+#конфигурацыя обращения к файлам
+PATHS:
+  #рабочий каталог
+  dist: './build'
+
+  #исходный каьалог
+  build: './build/assets/'
+
+  #каталог страниц
+  html:
+    - 'src/{layouts,partials}/**/*.html'
+    - 'src/data/**/*.{js,json,yml}'
+
+  #каталог стилей
+  styles:
+    - './src/assets/scss/**/*.scss'
+
+  #каталог картинок
+  img:
+    - './src/assets/img/**/*'
+
+  #каталог шрифтов
+  fonts:
+    - './src/assets/fonts/**/*'
+
+  #точка входа js
+  entrance:
+    - './src/assets/js/app.js'
