@@ -1,3 +1,26 @@
 .bg-purple {
     background: $purple;
 }
+h1, h2, h3, h4, h5, h6 {
+    color: $black;
+}
+.font-weight-montserrat-400 { // Regular
+    font-weight: 400;  
+}
+.font-weight-montserrat-700 { // bold
+    font-weight: 700; 
+}
+.font-weight-montserrat-800 { // extra-bold
+    font-weight: 800; 
+}
+.font-weight-montserrat-900 { // black
+    font-weight: 900; 
+}
+.font-raleway-400 {
+    font-family: $font-family-raleway;
+    font-weight: 400; // Regular 
+}
+.font-raleway-500 { //medium
+    font-family: $font-family-raleway;
+    font-weight: 500;
+}
