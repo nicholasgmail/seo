@@ -1,0 +1,32 @@
+.section-results-seo {
+   background-image: url(../img/section-results-seo.png);
+   background-repeat: no-repeat;
+   background-clip: padding-box;
+   background-origin: border-box;
+   background-position: bottom center;
+   background-size: 100% 80%;
+   //background-size: cover;
+   .carousel-indicators {
+      bottom: -25px;
+      li{
+         width: 12px;
+         height: 12px;
+         border-radius: 50%;
+         background-color: #f1a8e1;
+      }
+      .active {
+         background-color: #d805aa;
+      }
+   }
+}
+@include media-breakpoint-down(sm) {
+   .section-results-seo {
+      background-image: url(../img/section-results-seo-2.png);
+      background-repeat: no-repeat;
+      background-clip: padding-box;
+      background-origin: border-box;
+      background-position: bottom left;
+      background-size: 55% 85%;
+   }
+}
+
