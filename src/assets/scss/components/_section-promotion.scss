@@ -1,0 +1,54 @@
+.section-seo-promotion {
+   background-image: url(../img/seo-promotion.png); //linear-gradient(to right, #5a117d, #e703bd);
+   background-clip: padding-box;
+   background-origin: border-box;
+   background-position: top center;
+   background-size: cover;
+   .card-promotion {
+      box-shadow: 0px 0px 8.7px 1.3px rgba(0, 0, 0, 0.28);
+      &__bage {
+         top: 11%;
+         left: 84%;
+         transform: translate(-50%, -50%);
+      }
+   }
+   .card-svg {
+      top: 22%;
+      left: 94%;
+      transform: translate(-50%, -50%);
+      &__icon-1 {
+         right: 18%;
+      }
+      &__icon-2 {
+         transform: rotate(-10deg) translateY(-8%);
+         left: 19%;
+      }
+      &__icon-3 {
+         left: 21%;
+         -ms-transform: translateY(-46px);
+         transform: scaleY(1) translateY(-9px) rotateZ(14deg) rotateX(32deg) rotateY(-3deg);
+      }
+      &__icon-4 {
+         left: 31%;
+         transform: rotateX(40deg) translatey(-41px) rotateY(321deg) scale(1.5);
+      }
+   }
+}
+@include media-breakpoint-down(lg) {
+   .section-seo-promotion {
+      .card-promotion{
+          img{
+             width:40%;
+          }  
+      }
+      .card-svg {
+         left:100%
+      }
+   }
+}
+
+@include media-breakpoint-up(lg) {
+   .section-seo-promotion {
+      height: rem-calc(1619px);
+   }
+}

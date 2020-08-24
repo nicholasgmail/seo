@@ -1,0 +1,101 @@
+<!--footer-->
+<footer class="footer bg-purple pt-4">
+    <div class="container-lg">
+        <div class="row ">
+            <div class="col-9 col-sm-6 col-md-3 d-flex flex-column footer__links">
+                <h6 class="font-weight-montserrat-700 text-white my-3 my-sm-2">Услуги и цены</h6>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Потфолио и кейсы</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">FAQ</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Наша команда</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Контакты</a>
+
+                <h6 class="font-weight-montserrat-700 text-white font-raleway-500 my-3 my-sm-2">SMM</h6>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Настройка таргета FB и INST (креативы, тексты, смыслы)</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Ведение VK</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">SMM - ведение инстаграм</a>
+            </div>
+
+            <div class="col-9 col-sm-6 col-md-3 d-flex flex-column footer__links">
+                <h6 class="font-weight-montserrat-700 text-white my-3 my-sm-2">CEO продвижение</h6>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Анализ CEO технический</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Анализ позиций сайта</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Составление семантического ядра</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">CEO продвижение сайта</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">CEO продвижение страници</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Написание статей</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Крауд ссылки</a>
+            </div>
+
+            <div class="col-9 col-sm-6 col-md-3 d-flex flex-column footer__links">
+                <h6 class="font-weight-montserrat-700 text-white my-3 my-sm-2">Реклама</h6>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Настройка Аналитики Google.Adwords (установка целей)</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Настройка Яндекс.Директ</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Ведение Яндекс.Директ</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Настройка Google.Adwords</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Ведение Google.Adwords</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Настройка Яндекс и Google реклама</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Ведение Яндекс и Google реклама</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Прототипирование сайта (страници)</a>
+            </div>
+
+            <div class="col-9 col-sm-6 col-md-3 d-flex flex-column footer__links">
+                <h6 class="font-weight-montserrat-700 text-white my-3 my-sm-2">Разработка сайта</h6>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Разработка сайта (прототип, верстка, cms)</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Разработка лендинга (прототип, верстка, cms)</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Продажа лицензии 1С Битрикс Управление сайтом</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Административное ведение сайта (наполнение контентом)</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Техническое ведение сайта</a>
+
+                <h6 class="font-weight-montserrat-700 text-white my-3 my-sm-2">Лицензии Битрикса</h6>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Продажа лицензий Битрикс24</a>
+                <a href="#" class="font-raleway-500 text-decoration-none my-1">Автоматизация Бизнеса (заявки, воронка, почта, аналитика) на базе Битрикс24</a>
+            </div>
+
+            <div class="col-12 col-lg-9 d-flex flex-column">
+                <a href="#" class="d-block d-lg-none text-white font-weight-bold my-auto py-3">Карта сайта</a>
+                <a href="tel:{'+phone' | placeholder}" class="h4 text-white font-weight-montserrat-700 mb-0">{'+phone' | placeholder}</a>
+                <a href="mailto:{'+email' | placeholder}" class="text-white font-raleway-400">{'+email' | placeholder}</a>
+                <p class="text-white font-raleway-400 text-center text-lg-left pt-3">Подпишитесь на удобную для вас соц. сеть, чтобы не пропустить актуальные новости и акции</p>
+                <p class="d-none d-lg-block text-white-50 font-raleway-400">Предложение на сайте не является публичной офертой</p>
+            </div>
+
+            <div class="col-12  col-lg-3 d-flex flex-column pt-2 px-2">
+                <a href="#" class="d-none d-lg-block text-white font-weight-montserrat-700 my-auto h6">Карта сайта</a>
+                <div class="d-flex justify-content-center justify-content-lg-between my-auto">
+                      {if '+twitter' | placeholder}        
+                       <a href="{'+twitter' | placeholder}" class="mx-2 mx-lg-0" target="_blank">
+                        <img src="./assets/templates/savin-piar/img/footer/twitter.png" alt="twitter" height="39" width="39" />
+                    </a>
+                    {/if}
+                    {if '+vk' | placeholder}
+                    <a href="{'+vk' | placeholder}" class="mx-2 mx-lg-0" target="_blank">
+                        <img src="./assets/templates/savin-piar/img/footer/vk.png" alt="vk" height="39" width="39" />
+                    </a>
+                    {/if}
+                    {if '+facebook' | placeholder}
+                    <a href="{'+facebook' | placeholder}" class="mx-2 mx-lg-0" target="_blank">
+                        <img src="./assets/templates/savin-piar/img/footer/facebook.png" alt="facebook" height="39" width="39" />
+                    </a>
+                    {/if}
+                    {if '+instagram' | placeholder}
+                    <a href="{'+instagram' | placeholder}" class="mx-2 mx-lg-0">
+                        <img src="./assets/templates/savin-piar/img/footer/instagram.png" alt="instagram" height="39" width="39" />
+                    </a>
+                    {/if}
+                    {if '+youtube' | placeholder}
+                    <a href="{'+youtube' | placeholder}" class="mx-2 mx-lg-0" target="_blank">
+                        <img src="./assets/templates/savin-piar/img/footer/you-tube.png" alt="you-tube" height="39" width="39" />
+                    </a>
+                    {/if}  
+                </div>
+                <p class="d-block d-lg-none text-center text-lg-left text-white-50 font-raleway-400 pt-3">Предложение на сайте не является публичной офертой</p>
+                <p class="text-center text-lg-left text-white-50 font-raleway-400 my-auto">ООО "Савин-Пиар" {'' | date : 'Y'} г.</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+{$_modx->getChunk('YD')}
+{$_modx->getChunk('GA')}
+{$_modx->getChunk('VK')}
+{$_modx->getChunk('FB')}

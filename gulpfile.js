@@ -18,7 +18,16 @@ const Fiber = require('fibers');
 const tildeImporter = require('node-sass-tilde-importer');
 
 //релоадер browserSync
-const reload = browserSync.reload;
+async function rel(){
+    try{
+    const reload = browserSync.reload;
+    return reload
+} 
+catch (error) {
+    throw new Error(`Unable to get currency PRODUCTS`);
+  }
+}
+
 
 //плагины gulp подключение $
 const $ = plugins();
@@ -47,7 +56,8 @@ const fontsFiles = PATHS.fonts;
 
 //страницы HTML
 async function pages() {
-    return gulp.src('src/pages/**/*.{html,hbs,handlebars}')
+    try{
+    return await gulp.src('src/pages/**/*.{html,hbs,handlebars}')
         .pipe(panini({
             root: 'src/pages/',
             layouts: 'src/layouts/',
@@ -56,6 +66,10 @@ async function pages() {
             helpers: 'src/helpers/'
         }))
         .pipe(gulp.dest(PATHS.dist))
+    } 
+    catch (error) {
+        throw new Error(`Unable to get currency PRODUCTS`);
+      }
 }
 
 function resetPages(done) {
@@ -65,6 +79,7 @@ function resetPages(done) {
 
 //стили CSS
 async function styles() {
+    try{
     const css = await gulp.src(scssFiles)
     // .pipe($.sourcemaps.init())
         .pipe($.if(PRODUCTION, $.sass.sync({
@@ -123,6 +138,10 @@ async function styles() {
         .pipe(gulp.dest(PATHS.build + 'css'))
         .pipe(browserSync.stream())
     return css
+} 
+catch (error) {
+    throw new Error(`Unable to get currency PRODUCTS`);
+  }
 }
 
 //конфигурацыя webpack
@@ -148,8 +167,8 @@ let webpackConfig = {
 }
 
 //скрипты JS
-async function scripts() {
-    const js = await gulp.src(jsFiles)
+function scripts() {
+    const js = gulp.src(jsFiles)
         .pipe(named())
         .pipe($.sourcemaps.init())
         .pipe(webpackStream(webpackConfig, webpack))
@@ -166,11 +185,13 @@ async function scripts() {
         //.pipe($.if(PRODUCTION, $.rename({suffix: '.min'})))
         .pipe(gulp.dest(PATHS.build + 'js'))
         .pipe(browserSync.stream())
-    return js
+    return js;
 }
+
 
 //обработка изображения
 async function images() {
+    try{
     const imgmin = await gulp.src(imgFiles)
         .pipe($.if(PRODUCTION, $.imagemin([
                 $.imagemin.gifsicle({interlaced: true}),
@@ -181,12 +202,12 @@ async function images() {
                     max: 65,
                     quality: 'medium'
                 }),
-                $.imagemin.optipng({optimizationLevel: 5}),
+                $.imagemin.optipng({optimizationLevel: 2}),
                 $.imagemin.svgo({
                     plugins: [
                         {removeViewBox: true},
                         {cleanupIDs: false},
-                        pngquant({quality: '65-70', speed: 5})
+                        pngquant({quality: '5-10', speed: 5})
                     ]
                 }),
             ], {
@@ -196,40 +217,71 @@ async function images() {
         .pipe(gulp.dest(PATHS.build + 'img'))
         .pipe(browserSync.stream())
     return imgmin
+} 
+catch (error) {
+    throw new Error(`Unable to get currency PRODUCTS`);
+  }
 }
 
 //обработка шрифтов
 async function fonts() {
+    try{
     const fonts = await gulp.src(fontsFiles)
         .pipe(gulp.dest(PATHS.build + 'fonts'))
         .pipe(browserSync.stream())
     return fonts
+} 
+catch (error) {
+    throw new Error(`Unable to get currency PRODUCTS`);
+  }
 }
 
 //очистка
 async function clean() {
+    try{
     const cleanimg = await del(['build/*'])
     return cleanimg
+} 
+catch (error) {
+    throw new Error(`Unable to get currency PRODUCTS`);
+  }
 }
 
 //запуск сервера
 async function server(done) {
+    try{
     const browser = await browserSync.init({
         server: PATHS.dist,
         port: PORT
     }, done);
     return browser
+} 
+catch (error) {
+    throw new Error(`Unable to get currency PRODUCTS`);
+  }
 }
 
 //наблюдение
-function watch() {
-    gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, reload));
-    gulp.watch(htmlFiles).on('all', gulp.series(resetPages, pages, reload));
-    gulp.watch(scssFiles).on('all', gulp.series(styles, reload));
-    gulp.watch(jsFiles).on('all', gulp.series(scripts, reload));
-    gulp.watch(imgFiles).on('all', gulp.series(images, reload));
-    gulp.watch(fontsFiles).on('all', gulp.series(fonts, reload));
+async function watch() {
+    try{
+    await gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, rel));
+    await gulp.watch(htmlFiles).on('all', gulp.series(resetPages, pages, rel));
+    await gulp.watch(scssFiles).on('all', gulp.series(styles, rel));
+    await gulp.watch(jsFiles).on('all', gulp.series(scripts, rel));
+    await gulp.watch(imgFiles).on('all', gulp.series(images, rel));
+    await gulp.watch(fontsFiles).on('all', gulp.series(fonts, rel));
     //gulp.watch('build/*.html').on("change", reload);
+    }catch (error) {
+    throw new Error(`Unable to get currency PRODUCTS`);
+  }
+}
+//очистка css
+function purgecss() {
+    return gulp.src('build/assets/css/bootstrap.css')
+        .pipe($.purgecss({
+            content: ['build/*.html']
+        }))
+        .pipe(gulp.dest('build/assets/cssmin'))
 }
 
 //таска html
@@ -256,7 +308,9 @@ gulp.task('server', server);
 //таск watch
 gulp.task('watch', watch);
 
+gulp.task('purgecss', purgecss)
+
 //таск build
-gulp.task('build', gulp.series(clean, gulp.parallel(pages, scripts), images, styles, fonts));
+gulp.task('build', gulp.series(clean, gulp.parallel( pages, scripts, styles, fonts, ), images, purgecss));
 gulp.task('dev', gulp.series('build', 'server', 'watch'));
 

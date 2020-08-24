@@ -7,17 +7,40 @@
                <img src="assets/img/header/logo.png" class="img-fluid d-block mx-auto pr-3" alt="логотип"
                   alt="логотип сео" loading="lazy">Рекламное ВЕБ агенство</a>
          </div>
-         <button class="col-2 navbar-toggler border-0" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
+        
+            <div class="menu-icon d-lg-none" data-behaviour="toggle-menu-icon">
+              <span class="menu-icon__bar">
+            </div>
+            {{>mobile-menu}}
 
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                <li class="nav-item p-2 active rounded-pill">
-                  <a class="nav-link font-raleway-400 text-center text-white text-decoration-none" href="#">Услуги и цены
+                  <a class="nav-link font-raleway-400 text-center text-white text-decoration-none"
+                     data-toggle="collapse" href="#collapseMenu" role="button" aria-expanded="false"
+                     aria-controls="collapseMenu">Услуги и цены
                      <span class="sr-only">(current)</span></a>
+                  <div class="collapse position-absolute z-4 w-55" id="collapseMenu">
+                     <div class="card rounded-sm flex-row py-6 px-3 position-relative">
+                           <a class="collapse__link text-indigo position-absolute font-weight-bold" href="#"><u>Все услуги</u></a>
+                   
+                        {{#repeat 3}}
+                        <div class="card-body py-0 px-3">
+                           <h6 class="text-uppercase text-indigo font-weight-bold pl-2">Увеличение продаж</h6>
+                           <nav class="nav flex-column">
+                              <a class="nav-link text-dark" href="#">Seo-продвижение сайта</a>                                                         
+                              <a class="nav-link text-dark" href="#">Продвижение за лиды</a>                                                         
+                              <a class="nav-link text-dark" href="#">Контекстная реклама</a>                                                         
+                              <a class="nav-link text-dark" href="#">Продвижение в социальных сетях</a> 
+                              <a class="nav-link text-dark" href="#">Медийная реклама</a>
+                             <a class="nav-link text-dark" href="#">Продвижение мобильных приложений </a>                                                         
+                              <a class="nav-link text-dark" href="#">Курс по Seo</a>                                                         
+                              <a class="nav-link text-dark" href="#">Курс по instagram</a>
+                           </nav>
+                        </div>
+                        {{/repeat}}
+                       </div>                                       
+                  </div>
                </li>
                <li class="nav-item p-2 rounded-pill">
                   <a class="nav-link font-raleway-400 text-center text-white text-decoration-none" href="#">Кейсы</a>

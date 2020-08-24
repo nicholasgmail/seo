@@ -1,0 +1,26 @@
+.section-why-are-we {
+   background-image: url(../img/are-we.png);
+   background-clip: padding-box;
+   background-origin: border-box;
+   background-position: top center;
+   background-size: cover;
+   height: rem-calc(925px);
+}
+
+@include media-breakpoint-down(md) {
+   .section-why-are-we {
+      background-image: url(../img/are-we-mobile.png);
+      height: rem-calc(1156px);
+      p {
+         line-height: 1.2;
+      }
+      .card-body ul li:before {
+         top: 10%;
+      }
+   }
+}
+@include media-breakpoint-up(lg) {
+   .section-why-are-we {
+      height: rem-calc(925px);
+   }
+}

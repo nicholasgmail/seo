@@ -1,14 +1,14 @@
-<section class="section-tariffs">
+<section class="section-tariffs position-relative pt-20">
+    <img class="position-absolute section-tariffs__img-l" src="./assets/img/background-point-l.png" alt="seo">
+    <img class="position-absolute section-tariffs__img-r" src="./assets/img/background-point-r.png" alt="seo">
     <div class="container-lg">
-        <h2 class="text-uppercase text-center font-weight-montserrat-900  mb-5">Тфрифы<br> по продвижению сайтов</h2>
-    
+        <h2 class="display-3 text-uppercase text-center font-weight-montserrat-900 mb-6">Тфрифы<br> по продвижению сайтов</h2>    
         <div class="row justify-content-center">
-            {{#repeat 3}}
-            <div class="col-12 col-sm-6 col-md-5 col-lg-4">
+            {{#repeat 6}}
+            <div class="col-12 col-sm-6 col-md-5 col-lg-4 mb-5">
                 {{>card-tariffs}}
             </div>
             {{/repeat}}
         </div>
-
     </div>
 </section>

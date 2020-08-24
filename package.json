@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gulp dev",
-    "dev": "gulp dev --production"
+    "dev": "gulp dev",
+    "prod": "gulp dev --production"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +27,7 @@
     "gulp-imagemin": "^6.2.0",
     "gulp-load-plugins": "^2.0.3",
     "gulp-postcss": "^8.0.0",
+    "gulp-purgecss": "^2.3.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",

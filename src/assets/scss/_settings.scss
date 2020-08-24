@@ -1,13 +1,14 @@
-//база
 
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Rubik:300&display=swap&subset=cyrillic");
 
 //bootstrap
 $light: #f9f9f9;
 $secondary: #ebebeb;
 $green: #00a99d;
 $purple: #5a117d;
+$indigo: #810e7f;
 $black: #161616;
+$gray-600: #535c69;
+
 
 $enable-rounded: true;
 $enable-responsive-font-sizes: true;
@@ -66,6 +67,12 @@ $spacers: map-merge(
       20: (
          $spacer * 5,
       ),
+      22: (
+         $spacer * 6,
+      ),
+      24: (
+         $spacer * 8,
+      ),
    ),
    $spacers
 );
@@ -83,6 +90,8 @@ $sizes: map-merge(
       40: 40%,
       45: 45%,
       50: 50%,
+      55: 55%,
+      70: 70%,
       75: 75%,
       80: 80%,
       100: 100%,
@@ -90,3 +99,17 @@ $sizes: map-merge(
    ),
    $sizes
 );
+
+//$display1-size:               6rem !default;
+//$display2-size:               5.5rem !default;
+$display3-size:               4rem;
+$display4-size:               3.75rem;
+
+$display1-weight:             800 !default;
+$display2-weight:             800 !default;
+$display3-weight:             800 !default;
+$display4-weight:             800 !default;
+
+
+//$border-radius-lg:            .3rem;
+$border-radius-sm:               rem-calc(10px);
