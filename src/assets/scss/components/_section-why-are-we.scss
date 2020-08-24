@@ -1,5 +1,5 @@
 .section-why-are-we {      
-   background-image: url(../img/are-we-mobile.png
+   background-image: url(../img/are-we-mobile.png);
    background-clip: padding-box;
    background-origin: border-box;
    background-position: top center;
@@ -8,7 +8,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-   .section-why-are-we {);
+   .section-why-are-we {
       height: rem-calc(1156px);
       p {
          line-height: 1.2;
