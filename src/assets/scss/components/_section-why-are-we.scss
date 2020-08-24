@@ -1,5 +1,5 @@
-.section-why-are-we {
-   background-image: url(../img/are-we.png);
+.section-why-are-we {      
+   background-image: url(../img/are-we-mobile.png
    background-clip: padding-box;
    background-origin: border-box;
    background-position: top center;
@@ -7,9 +7,8 @@
    height: rem-calc(925px);
 }
 
-@include media-breakpoint-down(md) {
-   .section-why-are-we {
-      background-image: url(../img/are-we-mobile.png);
+@include media-breakpoint-down(sm) {
+   .section-why-are-we {);
       height: rem-calc(1156px);
       p {
          line-height: 1.2;
@@ -19,8 +18,9 @@
       }
    }
 }
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(sm) {
    .section-why-are-we {
+      background-image: url(../img/are-we.png);
       height: rem-calc(925px);
    }
 }
