@@ -1,0 +1,41 @@
+.section-clients-reviews {
+   background-image: url(../img/section-clients-reviews.png);
+   background-repeat: no-repeat;
+   background-clip: padding-box;
+   background-origin: border-box;
+   background-position: top center;
+   background-size: 100% 80%;
+   //background-size: cover;
+   .carousel {
+      .carousel-indicators {
+         li{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #f1a8e1;
+         }
+         .active {
+            background-color: #d805aa;
+         }
+      }
+      .carousel-item {
+         .card {
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            hr {
+            border-top: 1px solid #c052ec;
+            }
+            .card-img-wrapper {
+               background-image: url(../img/clients-reviews/bg-card.png);
+               background-size: cover;
+            }
+         }
+      }
+   }
+}
+@include media-breakpoint-down(sm) {
+   .section-clients-reviews {
+      background: white;
+   }
+}
+
+
