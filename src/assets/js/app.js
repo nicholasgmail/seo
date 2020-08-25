@@ -4,8 +4,8 @@ $svgSprite();
 
 $(function() {
   function init() {
-    $('[data-behaviour="toggle-menu-icon"]').on('click', toggleMenuIcon);
-    $('[data-behaviour="toggle-link-icon"]').on('click', toggleSubMenu);
+    $('[data-behaviour="toggle-menu-icon"]').on('click touchstart', toggleMenuIcon);
+    $('[data-behaviour="toggle-link-icon"]').on('click touchstart', toggleSubMenu);
   };
   
   function toggleMenuIcon() {

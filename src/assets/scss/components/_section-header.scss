@@ -1,0 +1,29 @@
+.section-header {
+   background-clip: padding-box;
+   background-origin: border-box;
+   background-position: top center;
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+
+@include media-breakpoint-down(xs) {
+   .section-header {
+      background-image: url(../img/home-img-mobile.png);
+      height: rem-calc(717px);
+   }
+}
+@include media-breakpoint-up(sm) {
+   .section-header {
+      background-image: url(../img/home-img.png);
+      background-size: cover;
+      height: rem-calc(925px);
+   }
+}
+
+@include media-breakpoint-down(md) {
+   .section-header {
+      .btn-matrix {
+         transform: matrix(0.76019, 0, 0, 0.76019, -32, 0);
+      }
+   }
+}

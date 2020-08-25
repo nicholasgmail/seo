@@ -1,7 +1,7 @@
 .header {
     background-image: url(../img/header/bg-header.jpg); //linear-gradient(to right, #5a117d, #e703bd);
     background-repeat: repeat-y;
-    background-size: contain;
+    background-size: inherit;
     background-position: center;
     .nav{
         &-link{
@@ -37,10 +37,11 @@
 }
 @include media-breakpoint-down(sm) {
     .header {
+        background-image: url(../img/header/bg-header-mobile.png);
         .collapse {
             background-image: url(../img/header/bg-header.jpg); //linear-gradient(to right, #5a117d, #e703bd);
             background-repeat: repeat-y;
-            background-size: contain;
+            background-size: inherit;
             background-position: center;
             transition: 0.4s ease-in-out;
             transition-delay: 0.5s;

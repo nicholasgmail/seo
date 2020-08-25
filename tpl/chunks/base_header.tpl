@@ -11,7 +11,7 @@
                   | placeholder}</a>
                {/if}
             </div>
-            <div class="col-auto menu-icon d-lg-none" data-behaviour="toggle-menu-icon">
+            <div class="col-auto menu-icon d-lg-none mr-3" data-behaviour="toggle-menu-icon">
                <span class="menu-icon__bar">
             </div>
             <nav class="nav-mobile z-3 w-100 d-lg-none" data-element="toggle-nav">
