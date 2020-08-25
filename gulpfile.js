@@ -20,7 +20,7 @@ const tildeImporter = require('node-sass-tilde-importer');
 //релоадер browserSync
 async function rel(){
     try{
-    const reload = browserSync.reload;
+    const reload = await browserSync.reload;
     return reload
 } 
 catch (error) {
@@ -66,6 +66,7 @@ async function pages() {
             helpers: 'src/helpers/'
         }))
         .pipe(gulp.dest(PATHS.dist))
+        .pipe(browserSync.stream())
     } 
     catch (error) {
         throw new Error(`Unable to get currency PRODUCTS`);
@@ -264,24 +265,30 @@ catch (error) {
 //наблюдение
 async function watch() {
     try{
-    await gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, rel));
-    await gulp.watch(htmlFiles).on('all', gulp.series(resetPages, pages, rel));
-    await gulp.watch(scssFiles).on('all', gulp.series(styles, rel));
-    await gulp.watch(jsFiles).on('all', gulp.series(scripts, rel));
-    await gulp.watch(imgFiles).on('all', gulp.series(images, rel));
-    await gulp.watch(fontsFiles).on('all', gulp.series(fonts, rel));
+    await gulp.watch('src/pages/**/*.html').on('change', gulp.series(pages, rel));
+    await gulp.watch(htmlFiles).on('change', gulp.series(resetPages, pages, rel));
+    await gulp.watch(scssFiles).on('change', gulp.series(styles, rel));
+    await gulp.watch(jsFiles).on('change', gulp.series(scripts, rel));
+    await gulp.watch(imgFiles).on('change', gulp.series(images, rel));
+    await gulp.watch(fontsFiles).on('change', gulp.series(fonts, rel));
     //gulp.watch('build/*.html').on("change", reload);
     }catch (error) {
     throw new Error(`Unable to get currency PRODUCTS`);
   }
 }
-//очистка css
-function purgecss() {
-    return gulp.src('build/assets/css/bootstrap.css')
+// минификация bootstrap css
+async function purgecss() {
+    try{
+    const $purgecss = await gulp.src('build/assets/css/bootstrap.css')
         .pipe($.purgecss({
             content: ['build/*.html']
         }))
-        .pipe(gulp.dest('build/assets/cssmin'))
+        .pipe(gulp.dest('build/assets/cssmin'));    
+     return $purgecss;     
+    } 
+    catch (error) {
+        throw new Error(`Unable to get currency PRODUCTS`);
+      }
 }
 
 //таска html

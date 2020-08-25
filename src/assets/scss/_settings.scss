@@ -10,6 +10,12 @@ $black: #161616;
 $gray-600: #535c69;
 
 
+// Base font size
+$rfs-base-font-size: 1.15rem;
+$rfs-rem-value: 10;
+// Factor of decrease
+$rfs-factor: 23;
+
 $enable-rounded: true;
 $enable-responsive-font-sizes: true;
 $border-radius: rem-calc(25px);
