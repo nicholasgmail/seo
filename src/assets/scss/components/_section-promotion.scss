@@ -59,6 +59,11 @@
    .section-seo-promotion {
       height: rem-calc(1556px);
       padding: 6rem 0 0 0;
+      .card{
+         &-body{
+            font-size: rem-calc(12px);
+         }
+      }
    }
 }
 @include media-breakpoint-down(xs) {

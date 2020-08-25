@@ -23,7 +23,9 @@
                         ({$menutitle})</span></a></li>',
                'tplParentRow' => '@FILE chunks/tpl_menu_collapse_mobile.tpl',
                'hereClass' => 'active'
-               ])}              
+               ])}
+
+              
             </nav>
 
             <div class="collapse navbar-collapse">
