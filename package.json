@@ -1,7 +1,6 @@
 {
   "name": "gulp__symple_2",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "gulp dev",
@@ -16,8 +15,10 @@
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.12",
+    "browserslist": "^4.14.0",
+    "caniuse-lite": "^1.0.30001117",
     "del": "^5.1.0",
-    "fibers": "^4.0.3",
+    "fibers": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-base64-inline": "^1.0.6",
@@ -52,5 +53,14 @@
     "jquery-migrate": "^3.3.0",
     "popper": "^1.0.1",
     "slick-carousel-latest": "^1.9.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicholasgmail/seo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nicholasgmail/seo/issues"
+  },
+  "homepage": "https://github.com/nicholasgmail/seo#readme",
+  "description": ""
 }
