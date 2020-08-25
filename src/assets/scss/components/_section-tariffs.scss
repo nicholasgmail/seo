@@ -5,50 +5,21 @@
       height: rem-calc(206px );
       transform: translate(-50%, -50%);
    }
-   &__img-r{
-      top:35%;
-      right: .7%;
-      height: rem-calc(172px );
-      transform: translate(-50%, -50%);
-   }
-}
-
-.card-body {
-   ul {
-       li{
-           &:before{
-               content: '';
-               display: inline-block;
-               position: absolute;
-               height:12px;
-               width: 12px;
-               vertical-align: middle;
-               background-color: #9f08ea;
-               border-radius: 50%;
-               top: 24%;
-               left: 2%;
-               transform: translate(-50%, -50%);
-           }
-           &:nth-child(1), &:nth-child(2) {
-               &:before {
-                   background-color: #d805aa;
-               }
-           }
-           &:nth-child(3) {
-               &:before {
-                   background-color: #c606bd; 
-               }
-           }
-           &:nth-child(4) {
-               &:before {
-                   background-color: #b707d0; 
-               }
-           }
-           &:nth-child(5) {
-               &:before {
-                   background-color: #9f08ea; 
-               }
-           }
-       }
-   }
+    &__img-r{
+        top:35%;
+        right: .7%;
+        height: rem-calc(172px );
+        transform: translate(-50%, -50%);
+    }
+    &-cards {
+        .heder-left {      
+            background: linear-gradient(to right, #a30c80, #5a117d);
+        }
+        .heder-center {
+            background: linear-gradient(to right, #5a117d, #64107e);
+        }
+        .heder-right {
+            background: linear-gradient(to right, #64107e, #a30c80);
+        }
+    }
 }
