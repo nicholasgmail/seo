@@ -1,29 +1,50 @@
+@import "../mixin/_mixin";
 .section-header {
    background-clip: padding-box;
    background-origin: border-box;
-   background-position: top center;
    background-repeat: no-repeat;
    background-size: contain;
-}
-
-@include media-breakpoint-down(xs) {
-   .section-header {
-      background-image: url(../img/home-img-mobile.png);
-      height: rem-calc(717px);
+   .card {
+      &-img-overlay {
+         p{
+            @include line;
+         }         
+      }
    }
 }
-@include media-breakpoint-up(sm) {
+
+@media (max-width: 414.98px) {
+   .section-header {
+      background-image: url(../img/home-img-mobile.png);
+      height: rem-calc(750px);
+      background-size: cover;
+   }
+}
+@media (min-width: 415px) {
    .section-header {
       background-image: url(../img/home-img.png);
       background-size: cover;
-      height: rem-calc(925px);
+      height: rem-calc(670px);
+   }
+}
+@include media-breakpoint-up(xl) {
+   .section-header {
+      background-image: url(../img/home-img.png);
+      background-size: cover;
+      height: 77vh;
    }
 }
 
-@include media-breakpoint-down(md) {
+/* @include media-breakpoint-down(md) {
    .section-header {
       .btn-matrix {
          transform: matrix(0.76019, 0, 0, 0.76019, -32, 0);
       }
+   }
+} */
+
+@include media-breakpoint-up(sm) {
+   .section-header {
+      background-position: top center;
    }
 }

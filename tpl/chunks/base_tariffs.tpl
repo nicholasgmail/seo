@@ -1,11 +1,13 @@
+
+{set $resourceList = $id | resource: 'list-resource'}
 {$_modx->runSnippet('!pdoResources', [
-'parents' => '2',
+'parents' => $id,
 'depth'=>'0',
 'sortby' => '{"menuindex":"ASC"}',
-'resources'=> "{'1' | resource: 'list-resource'}",
+'resources'=>  $resourceList,
 'limit'=>'15',
 'tpl' => '@FILE chunks/tpl_tariffs.tpl',
 'toPlaceholder' => 'resultseo',
-'includeTVs' => 'services-price,service-list',
+'includeTVs' => 'price,services-list-price,position-card',
 'processTVs' => '1'
 ])}

@@ -21,13 +21,20 @@
 @import "functions/_functions";
 @import "mixin/_mixin";
 
+@import "components/lib/hamburger/base-hamburger";
+@import "components/lib/hamburger/hamburger";
 @import "components/lib/card-tariffs";
+@import "components/lib/menu-mobile";
 @import "components/section-tariffs";
-@import "components/mobile.sass";
+@import "components/mobile";
 @import "components/section-header";
+@import "components/section-our-team";
 @import "components/section-promotion";
 @import "components/section-results-seo";
 @import "components/section-clients-reviews";
 @import "components/top-header";
-@import "components/_section-why-are-we";
+@import "components/section-why-are-we";
+@import "components/section-services-all";
+@import "components/section-free-consultation";
+@import "components/section-questions-left";
 @import "components/footer";

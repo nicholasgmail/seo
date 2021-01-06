@@ -11,15 +11,4 @@
         height: rem-calc(172px );
         transform: translate(-50%, -50%);
     }
-    &-cards {
-        .heder-left {      
-            background: linear-gradient(to right, #a30c80, #5a117d);
-        }
-        .heder-center {
-            background: linear-gradient(to right, #5a117d, #64107e);
-        }
-        .heder-right {
-            background: linear-gradient(to right, #64107e, #a30c80);
-        }
-    }
 }

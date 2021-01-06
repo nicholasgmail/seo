@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.11.4",
+    "@babel/plugin-transform-runtime": "^7.11.5",
     "@babel/preset-env": "^7.11.0",
     "@babel/register": "^7.10.5",
     "autoprefixer": "^9.8.6",
@@ -33,6 +34,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
+    "hamburgers": "^1.1.3",
     "hover.css": "^2.3.2",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-pngquant": "^8.0.0",
@@ -47,12 +49,17 @@
     "yargs": "^14.2.3"
   },
   "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "@material/icon-button": "^7.0.0",
+    "@material/top-app-bar": "^7.0.0",
+    "ant-design-vue": "^1.6.5",
     "bootstrap": "^4.5.2",
     "bourbon": "^6.0.0",
     "jquery": "^3.5.1",
     "jquery-migrate": "^3.3.0",
     "popper": "^1.0.1",
-    "slick-carousel-latest": "^1.9.0"
+    "slick-carousel-latest": "^1.9.0",
+    "vue-template-compiler": "^2.6.12"
   },
   "repository": {
     "type": "git",

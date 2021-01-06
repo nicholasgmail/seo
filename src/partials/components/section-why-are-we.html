@@ -1,21 +1,33 @@
-<section class="section-why-are-we d-flex align-items-start align-items-sm-center">
-   <div class="container-lg pt-22 p-md-0">
-      <div class="row">
-         <div class="col-auto col-sm-6  align-self-center">
-            <div class="card-body  pl-md-5 px-0 pr-md-1 px-lg-0">
-               <h2 class="display-3 text-uppercase text-center text-md-left font-weight-montserrat-900 mb-md-6">Почему мы?</h2>
-               <p class="font-size-23 font-size-sm-18  text-center text-md-left mb-6">Дорогой клиент, почему именно <br> МЫ заслуживаем Вашего внимания?</p>
-               <ul class="card-text list-unstyled">
-                  {{#repeat 3}}
-                  <li class="pb-2 position-relative">
-                     <p class="font-raleway-500 font-family-raleway pl-6 px-md-10 mb-0">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quod, autem itaque, quisquam sint
-                        veniam assumenda quam necessitatibus modi, nostrum ducimus corporis eius commodi ullam.
-                     </p>
-                  </li>
-                  {{/repeat}}
-               </ul>
-            </div>
+<section class="section-why-are-we d-flex align-items-start position-relative align-items-sm-center py-16">
+   <img src="./assets/img/are-we-mobile.png" alt="" class="img-background d-sm-none position-absolute">
+   <img src="./assets/img/are-we.png" alt="" class="img-background d-none d-sm-block position-absolute">
+   <div class="container-lg">
+      <div class="row row-cols-1 row-cols-sm-2">
+         <div class="col align-self-center mt-10 mt-sm-0">
+            <h2 class="display-3 text-uppercase text-center text-md-left font-weight-montserrat-900 mb-md-6">
+               Почему мы?</h2>
+            <p class="font-size-23 font-size-sm-18  text-center text-md-left mb-6">Дорогой клиент, почему именно
+               <br> МЫ заслуживаем
+               Вашего внимания?</p>
+            <ul class="list-unstyled">
+               {{#repeat 3}}
+               <li class="pb-2 position-relative">
+                  <p class="font-raleway-500 font-family-raleway pl-6 px-md-10 mb-0">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quod, autem itaque, quisquam
+                     sint
+                     veniam assumenda quam necessitatibus modi, nostrum ducimus corporis eius commodi ullam.
+                  </p>
+               </li>
+               {{/repeat}}
+            </ul>
+         </div>
+         <div class="col my-10 my-sm-0">
+            <a class="video-modal" href="https://www.youtube.com/embed/g8GN-h2xyKc" data-video-width="560"
+               data-video-height="315">
+               <img src="./assets/img/are-we-img.png" class="ml-3 img-fluid d-none d-md-block mx-auto w-80" alt="...">
+               <img src="./assets/img/are-we-img-mobile.png" class="ml-3 img-fluid d-block d-md-none  mx-auto"
+                  alt="...">
+            </a>
          </div>
       </div>
    </div>

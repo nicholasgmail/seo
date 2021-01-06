@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html dir="ltr" class="no-js" lang="{$_modx->config.cultureKey}" prefix="og: http://ogp.me/ns#">
-<head>
+
     <meta charset="{$_modx->config.modx_charset}" />
     <base href="{$_modx->config.site_url}">
     <meta name="description" content="{$_modx->resource.description}">
@@ -18,6 +16,9 @@
     rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.8.3/css/lightgallery.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.8.3/css/lg-transitions.min.css">
     <link rel="stylesheet" href="./assets/templates/savin-piar/css/bootstrap.css">
     <link rel="stylesheet" href="./assets/templates/savin-piar/css/style.css">
     <!-- openGraph -->
@@ -39,8 +40,7 @@
 	<meta itemprop="name" content="{$_modx->config.site_url}">
 	<meta itemprop="description" content="{$_modx->resource.description}">
 	<meta itemprop="image" content="{$_modx->config.site_url}assets/templates/savin-piar/img/header/logo.png">
-    <!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    {$_modx->getChunk('GL')}
-</head>
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){ w[l]=w[l]||[];w[l].push({ 'gtm.start':new Date().getTime(),event:'gtm.js' });var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-TZG9N8K');</script>
+    <!-- End Google Tag Manager -->

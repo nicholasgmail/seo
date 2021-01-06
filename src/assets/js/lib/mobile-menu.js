@@ -1,23 +1,32 @@
-const $mobileMenu = function(){
-$(function() {
-  function init() {
-    $('[data-behaviour="toggle-menu-icon"]').on('click', toggleMenuIcon);
-    $('[data-behaviour="toggle-link-icon"]').on('click', toggleSubMenu);
-  };
-  
-  function toggleMenuIcon() {
-    $(this).toggleClass('menu-icon--open');
-    $('[data-element="toggle-nav"]').toggleClass('nav-mobile--active');
-  };
-  
-  function toggleSubMenu() {
-    $(this).toggleClass('nav-mobile__link--plus nav-mobile__link--minus');
-    //$('[data-behaviour="toggle-sub-menu"]').slideToggle('nav-mobile__sub-list--active');
-    $(this).parent().slideToggle('nav-mobile__sub-list--active');
-  };
-  
-  init()
-});
+
+const $menuMobilejs = function () { 
+  const navExpand = [].slice.call(document.querySelectorAll(".nav-expand"));
+  const backLink = `<li class="nav-item">
+	<a class="nav__link nav-back-link" href="javascript:;">
+	   Предедущее
+	</a>
+</li>`;
+
+  navExpand.forEach((item) => {
+    item
+      .querySelector(".nav-expand-content")
+      .insertAdjacentHTML("afterbegin", backLink);
+    item
+      .querySelector(".nav__link")
+      .addEventListener("click", () => item.classList.add("active"));
+    item
+      .querySelector(".nav-back-link")
+      .addEventListener("click", () => item.classList.remove("active"));
+  });
+
+  // ---------------------------------------
+  // not-so-important stuff starts here
+
+  const ham = document.getElementById("humburger");
+  ham.addEventListener("click", function () {
+    document.body.classList.toggle("nav-is-toggled");
+  });
+
 }
 
-export default $mobileMenu;
+export default $menuMobilejs;

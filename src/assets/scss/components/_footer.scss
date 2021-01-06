@@ -7,4 +7,10 @@
             }
         }
     }
+    &__link {
+    & > a {
+      color: inherit;
+      background: inherit;
+    }
+  }
 }

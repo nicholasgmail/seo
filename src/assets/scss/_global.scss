@@ -9,10 +9,10 @@ h5,
 h6 {
     color: $black;
 }
-.font-family-raleway {
+/* .font-family-raleway {
     font-family: $font-family-raleway;
  
-}
+} */
 @include media-breakpoint-down(md) {
 .font-size-sm-13 {
     font-size: rem-calc(13px);
@@ -26,6 +26,12 @@ h6 {
 
 }
 @include media-breakpoint-up(lg) {
+    .font-size-10 {
+        font-size: rem-calc(10px);
+    }
+    .font-size-12 {
+        font-size: rem-calc(12px);
+    }
     .font-size-14 {
         font-size: rem-calc(14px);
     }
@@ -38,11 +44,20 @@ h6 {
     .font-size-30 {
         font-size: rem-calc(30px);
     }
+    .font-size-33 {
+        font-size: rem-calc(33px);
+    }
+    .font-size-36 {
+        font-size: rem-calc(36px);
+    }
 
     .font-size-47 {
         font-size: rem-calc(47px);
     }
 }
+.font-size-64 {
+        font-size: rem-calc(64px);
+    }
 .font-weight-montserrat-400 {
     // Regular
     font-weight: 400;
@@ -60,8 +75,8 @@ h6 {
     font-weight: 900;
 }
 p {
-    font-family: $font-family-raleway;
-    font-weight: 400; // Regular
+/*     font-family: $font-family-raleway;
+    font-weight: 400; // Regular */
     line-height: 1.2;
 }
 p {
@@ -72,7 +87,7 @@ a {
 }
 .font-raleway-500 {
     //medium
-    font-family: $font-family-raleway;
+   /*  font-family: $font-family-raleway; */
     font-weight: 500;
 }
 
@@ -128,4 +143,16 @@ a {
 .br-radius-35 {
     border-radius: rem-calc(35px);
 }
+s{
+    text-decoration-color: $pink;
+}
 
+.form-control{
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.b24-widget-button-wrapper {
+    z-index: 1039 !important;
+}
