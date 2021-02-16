@@ -1,0 +1,109 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js init
+
+PATH: 
+  C:\PVSW\BIN;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Yarn\bin\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\wget;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\polin\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\polin\AppData\Local\Programs\Python\Python39\;C:\Users\polin\AppData\Local\Microsoft\WindowsApps;C:\Users\polin\AppData\Local\Yarn\bin;C:\Program Files\JetBrains\PhpStorm 2019.1.1\bin;C:\Program Files\JetBrains\PhpStorm 2019.1.2\bin;C:\Program Files\Docker Toolbox;C:\Program Files\JetBrains\PhpStorm 2020.2.1\bin;C:\Users\polin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\polin\AppData\Local\Microsoft\WindowsApps;C:\Users\polin\AppData\Roaming\npm
+
+Yarn version: 
+  1.9.2
+
+Node version: 
+  15.7.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:125950:13)
+      at Interface.emit (node:events:379:20)
+      at Interface._ttyWrite (node:readline:910:16)
+      at ReadStream.onkeypress (node:readline:235:10)
+      at ReadStream.emit (node:events:379:20)
+      at emitKeys (node:internal/readline/utils:358:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:readline:1179:36)
+      at ReadStream.emit (node:events:379:20)
+      at addChunk (node:internal/streams/readable:313:12)
+
+npm manifest: 
+  {
+    "name": "gulp__symple_2",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "dev": "gulp dev",
+      "prod": "gulp dev --production"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@babel/core": "^7.12.13",
+      "@babel/plugin-transform-runtime": "^7.12.15",
+      "@babel/preset-env": "^7.12.13",
+      "@babel/register": "^7.12.13",
+      "autoprefixer": "^10.2.4",
+      "babel-loader": "^8.2.2",
+      "browser-sync": "^2.26.14",
+      "browserslist": "^4.16.3",
+      "caniuse-lite": "^1.0.30001185",
+      "del": "^6.0.0",
+      "gulp": "^4.0.2",
+      "gulp-babel": "^8.0.0",
+      "gulp-base64-inline": "^1.0.6",
+      "gulp-clean-css": "^4.3.0",
+      "gulp-concat": "^2.6.1",
+      "gulp-if": "^3.0.0",
+      "gulp-imagemin": "^7.1.0",
+      "gulp-load-plugins": "^2.0.6",
+      "gulp-postcss": "^9.0.0",
+      "gulp-purgecss": "^4.0.0",
+      "gulp-rename": "^2.0.0",
+      "gulp-sass": "^4.1.0",
+      "gulp-sourcemaps": "^3.0.0",
+      "gulp-uglify": "^3.0.2",
+      "hamburgers": "^1.1.3",
+      "hover.css": "^2.3.2",
+      "imagemin-jpeg-recompress": "^7.0.0",
+      "imagemin-pngquant": "^9.0.1",
+      "js-yaml": "^4.0.0",
+      "node-sass": "^5.0.0",
+      "node-sass-tilde-importer": "^1.0.2",
+      "panini": "^1.7.1",
+      "postcss-preset-env": "^6.7.0",
+      "vinyl-named": "^1.1.0",
+      "webpack": "^5.21.0",
+      "webpack-stream": "^6.1.2",
+      "yargs": "^16.2.0"
+    },
+    "dependencies": {
+      "@babel/runtime": "^7.11.2",
+      "@material/icon-button": "^7.0.0",
+      "@material/top-app-bar": "^7.0.0",
+      "ant-design-vue": "^1.6.5",
+      "bootstrap": "^4.5.2",
+      "bourbon": "^6.0.0",
+      "glider-js": "^1.7.3",
+      "jquery": "^3.5.1",
+      "jquery-migrate": "^3.3.0",
+      "popper": "^1.0.1",
+      "rfs": "^9.0.3",
+      "slick-carousel-latest": "^1.9.0",
+      "vue-template-compiler": "^2.6.12"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/nicholasgmail/seo.git"
+    },
+    "bugs": {
+      "url": "https://github.com/nicholasgmail/seo/issues"
+    },
+    "homepage": "https://github.com/nicholasgmail/seo#readme",
+    "description": ""
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
