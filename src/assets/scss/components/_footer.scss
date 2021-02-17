@@ -1,0 +1,16 @@
+.footer {
+    &__links {
+        a {
+            color: #c9c4cb;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+    &__link {
+    & > a {
+      color: inherit;
+      background: inherit;
+    }
+  }
+}

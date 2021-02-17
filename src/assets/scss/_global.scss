@@ -1,8 +1,18 @@
+:root{
+    --bs-breadcrumb-divider: url("data:image/svg+xml;charset=UTF-8,%3csvg width='5' height='8' viewBox='0 0 5 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L4 4L1 7' stroke='white'/%3e%3c/svg%3e ");
+}
 @include media-breakpoint-up(xxl) {
-    html{
+    html {
         font-size: 20px;
-    }    
- }
+    }
+}
+
+//fonts-size
+
+.fs-7{
+    font-size: 0.75rem;
+}
+
 .bg-purple {
     background: $purple;
 }
@@ -41,4 +51,17 @@
 }
 .z-7 {
     z-index: $zindex-tooltip;
+}
+
+.btn-outline-warning {
+    &:hover {
+        color: $white;
+        box-shadow: 0px 0px 54px rgba(255, 193, 7, 0.45);
+    }
+}
+.no-spacer {
+    white-space: nowrap;
+}
+.wrap-spacer {
+    white-space: pre-wrap;
 }

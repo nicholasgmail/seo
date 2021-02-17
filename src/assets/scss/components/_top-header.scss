@@ -1,0 +1,108 @@
+.header {
+  background-image: url(../img/header/bg-header.jpg); //linear-gradient(to right, #5a117d, #e703bd);
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-position: center;
+
+  .nav {
+    &-link {
+      font-weight: 700;
+
+      &.active {
+        color: $indigo;
+      }
+    }
+  }
+  &__link {
+    & > a {
+      color: inherit;
+      background: inherit;
+    }
+    span {
+      & > a {
+        color: inherit;
+        background: inherit;
+      }
+    }
+    &_background_gray {
+      background: rgba(64, 64, 64, 0.38);
+      border-radius: 5px;
+    }
+  }
+  &__list {
+    li {
+      background: rgba(64, 64, 64, 0.38);
+      border-radius: 5px;
+    }
+  }
+  .navbar-nav {
+    .card {
+      &-body {
+        h6 {
+          border-bottom: 1px solid $indigo;
+        }
+      }
+    }
+
+    .nav-item {
+      &.active {
+        background: rgba(255, 255, 255, 0.19);
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.19);
+        border-radius: $border-radius;
+      }
+
+      .collapsing {
+        transition: none;
+      }
+
+      .collapse {
+        &__link {
+          right: 3%;
+          bottom: 1%;
+        }
+
+        /* .card {
+           &-body:not(:last-child) {
+               border-right: 2px solid $indigo;
+           }
+        }*/
+      }
+    }
+  }
+}
+
+@media (max-width: 414.98px) {
+  .header {
+    background-image: url(../img/header/bg-header-mobile.png);
+    background-size: contain;
+
+    .navbar {
+      &__logo {
+        font-size: 12px;
+      }
+
+      .navbar-toggler {
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .navbar-collapse {
+        position: absolute;
+        width: 100%;
+        padding: 0 1.5rem;
+        top: 100%;
+        left: 0%;
+        z-index: 1050;
+      }
+    }
+
+    .navbar-toggler-icon {
+      background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="19px"%3E%3Cpath fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M-0.000,-0.000 L30.000,-0.000 L30.000,1.999 L-0.000,1.999 L-0.000,-0.000 Z"/%3E%3Cpath fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M-0.000,9.000 L30.000,9.000 L30.000,10.999 L-0.000,10.999 L-0.000,9.000 Z"/%3E%3Cpath fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M-0.000,17.000 L30.000,17.000 L30.000,18.999 L-0.000,18.999 L-0.000,17.000 Z"/%3E%3C/svg%3E');
+      height: rem-calc(20px);
+    }
+  }
+}
