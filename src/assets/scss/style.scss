@@ -16,4 +16,10 @@
 @import "./mixin/_mixin";
 @import "./global";
 
-
+@import "components/lib/hamburger/base-hamburger";
+@import "components/lib/hamburger/hamburger";
+@import "components/lib/card-tariffs";
+@import "components/lib/menu-mobile";
+@import "./components/top-header";
+@import "./components/footer";
+ 

@@ -153,7 +153,7 @@ async function styles() {
                  postcssPresetEnv({
                      stage: 2,
                      browsers: COMPATIBILITY,
-                     autoprefixer: {grid: true, cascade: false},
+                     autoprefixer: { grid: false, cascade: false},
                      features: {'nesting-rules': true}
                  })
              ]))
@@ -311,7 +311,7 @@ async function watch() {
     try {
         await gulp.watch('src/pages/**/*.html').on('change', gulp.series(pages, rel));
         await gulp.watch(htmlFiles).on('change', gulp.series(resetPages, pages, rel));
-        //await gulp.watch(scssFiles).on('change', gulp.series(styles, rel));
+        await gulp.watch(scssFiles).on('change', gulp.series(styles, rel));
         await gulp.watch(jsFiles).on('change', gulp.series(scripts, rel));
         await gulp.watch(imgFiles).on('change', gulp.series(images, rel));
         await gulp.watch(fontsFiles).on('change', gulp.series(fonts, rel));
@@ -339,7 +339,7 @@ async function purgecss() {
 gulp.task('pages', pages);
 
 //таска css
-//gulp.task('styles', styles);
+gulp.task('styles', styles);
 
 //таска js
 gulp.task('scripts', scripts);
@@ -362,6 +362,6 @@ gulp.task('watch', watch);
 gulp.task('purgecss', purgecss)
 
 //таск build
-gulp.task('build', gulp.series(clean, gulp.parallel(pages, scripts, styles, fonts,), images, purgecss));
+gulp.task('build', gulp.series(clean, gulp.parallel(pages, scripts, styles, fonts), images, purgecss));
 gulp.task('dev', gulp.series('build', 'server', 'watch'));
 

@@ -1,3 +1,8 @@
+@include media-breakpoint-up(xxl) {
+    html{
+        font-size: 20px;
+    }    
+ }
 .bg-purple {
     background: $purple;
 }
