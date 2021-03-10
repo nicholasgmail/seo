@@ -21,14 +21,16 @@ $ready(() => {
     let $clMenu = document.getElementById('collapseMenu')
     let $linkCollapse = document.querySelector('.nav-link__collapse');
 
-    $linkCollapse.addEventListener("mouseover", function () {
-        let $c = this.getAttribute('href');
+    if ($linkCollapse) {
+        $linkCollapse.addEventListener("mouseover", function () {
+            let $c = this.getAttribute('href');
             let $elCollap = [].slice.call(document.querySelectorAll($c));
             $elCollap.map(function (collapseEl) {
                 //collapseEl.classList.toggle('show');
                 return new bootstrap.Collapse(collapseEl)
             })
-    })
+        })
+    }
     /* $(".navbar-nav a.nav-link__collapse").hover(function () {
          var colaps = $(this).attr("href");
          if (colaps && colaps !== "#") {
