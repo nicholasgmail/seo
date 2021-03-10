@@ -13,7 +13,6 @@
     }
 }
 
-
 h1,
 h2,
 h3,
@@ -74,7 +73,7 @@ strong {
 }
 .text-indigo {
     color: $indigo;
-} 
+}
 .btn-outline-warning {
     &:hover {
         color: $white;
@@ -88,4 +87,6 @@ strong {
     white-space: pre-wrap;
 }
 
-
+.splide__arrow {
+    background: none;
+}

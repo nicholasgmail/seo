@@ -1,22 +1,25 @@
 import $menuMobilejs from "./lib/mobile-menu";
 import $imgAddClass from "./lib/img-add-class";
 import $scroll from "./lib/scroll";
-import {$scrollTo} from "./lib/scroll-back";
+import { $scrollTo } from "./lib/scroll-back";
 import $hamburger from "./lib/hamburger";
+import $splide from "./lib/splider";
 
 var $ready = (callback) => {
     if (document.readyState != "loading") callback();
     else document.addEventListener("DOMContentLoaded", callback);
 }
 $ready(() => {
-    //константы
 
+
+    //константы
     const $dcElement = document.documentElement;
 
     $menuMobilejs();
     $imgAddClass();
     $scroll();
     $hamburger();
+    $splide();
     // let $collapseMenu = document.querySelector('#collapseMenu');
     let $clMenu = document.getElementById('collapseMenu')
     let $linkCollapse = document.querySelector('.nav-link__collapse');
@@ -64,14 +67,14 @@ $ready(() => {
             return false;
         }
     }, true);
-   /* document.addEventListener('mouseover', function (event) {
-        let $d = event.target;
-        let $navItem = $d.closest('.nav-item');
-        if ($navItem) {
-            if (!$navItem.children[0].classList.contains('nav-link__collapse')) $clMenu.classList.toggle('show');
-        }
-        return false;
-    }, true);*/
+    /* document.addEventListener('mouseover', function (event) {
+         let $d = event.target;
+         let $navItem = $d.closest('.nav-item');
+         if ($navItem) {
+             if (!$navItem.children[0].classList.contains('nav-link__collapse')) $clMenu.classList.toggle('show');
+         }
+         return false;
+     }, true);*/
     document.addEventListener('scroll', function (event) {
         event.preventDefault;
         var $scrollTop = document.scrollingElement.scrollTop;
@@ -98,13 +101,13 @@ $ready(() => {
     });
 
     /*обвернуть таблицу*/
-        let $elTable = [].slice.call(document.querySelectorAll('.table'));
-        $elTable.forEach(elem =>{
-            let $tableEl = elem.outerHTML;
-           elem.outerHTML = `<div class="table-responsive">${$tableEl}</div>`;
-        })
-        /*$elTable.map(function (tableEl) {
-            let $tableEl = tableEl.innerHTML;
-            tableEl.innerHTML = `<div class="table-responsive">${$tableEl}</div>`;
-        })*/
+    let $elTable = [].slice.call(document.querySelectorAll('.table'));
+    $elTable.forEach(elem => {
+        let $tableEl = elem.outerHTML;
+        elem.outerHTML = `<div class="table-responsive">${$tableEl}</div>`;
+    })
+    /*$elTable.map(function (tableEl) {
+        let $tableEl = tableEl.innerHTML;
+        tableEl.innerHTML = `<div class="table-responsive">${$tableEl}</div>`;
+    })*/
 })
