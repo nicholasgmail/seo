@@ -80,7 +80,7 @@ $nav-level5-background-color: $primary-color-tint-2;
 .nav {
   &-drill {
     position: fixed;
-    z-index: 100;
+    padding: 0;
     top: 0;
     right: 0; 
     height: 100%;

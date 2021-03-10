@@ -1,18 +1,38 @@
-:root{
+:root {
     --bs-breadcrumb-divider: url("data:image/svg+xml;charset=UTF-8,%3csvg width='5' height='8' viewBox='0 0 5 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L4 4L1 7' stroke='white'/%3e%3c/svg%3e ");
 }
+
 @include media-breakpoint-up(xxl) {
     html {
-        font-size: 20px;
+        font-size: 18px;
+    }
+}
+@include media-breakpoint-down(lg) {
+    html {
+        font-size: 13px;
     }
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+strong {
+    color: #535c69;
+}
 //fonts-size
 
-.fs-7{
+.fs-7 {
     font-size: 0.75rem;
 }
-
+.text-purle {
+    color: $purple;
+}
 .bg-purple {
     background: $purple;
 }
@@ -52,7 +72,9 @@
 .z-7 {
     z-index: $zindex-tooltip;
 }
-
+.text-indigo {
+    color: $indigo;
+} 
 .btn-outline-warning {
     &:hover {
         color: $white;
@@ -65,3 +87,5 @@
 .wrap-spacer {
     white-space: pre-wrap;
 }
+
+

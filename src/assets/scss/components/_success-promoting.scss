@@ -1,0 +1,22 @@
+.success-promoting {
+   @include media-breakpoint-down(xs) {
+      .fs-140 {
+         font-size: rem-calc(130px);
+      }
+   }
+   @include media-breakpoint-up(sm) {
+      .fs-160 {
+         font-size: rem-calc(160px);
+      }
+   }
+   @include media-breakpoint-up(md) {
+      .fs-140 {
+         font-size: rem-calc(130px);
+      }
+   }
+   @include media-breakpoint-up(lg) {
+      .fs-200 {
+         font-size: rem-calc(200px);
+      }
+   }
+}

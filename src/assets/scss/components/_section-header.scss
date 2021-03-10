@@ -44,7 +44,9 @@
       li {
          counter-increment: list-decorate-circle;
          white-space: pre-wrap;
+         line-height: 1;
          margin: 0.5rem 0;
+         padding-left: 2rem;
          &::before {
             content: counter(list-decorate-circle);
             width: 1.5rem;
@@ -52,8 +54,10 @@
             line-height: 1.5rem;
             background: $purple;
             display: inline-block;
-            margin-right: 1rem;
+            margin-right: 0.5rem;
             border-radius: 5px;
+            margin-top: 1%;
+            margin-left: -2rem;
             text-align: center;
          }
       }

@@ -3,7 +3,16 @@
   background-repeat: repeat-y;
   background-size: contain;
   background-position: center;
-
+  .navbar-nav {
+    a {
+      color: $gray-600;
+    }
+  }
+  .card-body {
+    a {
+      text-decoration: none;
+    }
+  }
   .nav {
     &-link {
       font-weight: 700;
@@ -78,7 +87,6 @@
   .header {
     background-image: url(../img/header/bg-header-mobile.png);
     background-size: contain;
-
     .navbar {
       &__logo {
         font-size: 12px;
