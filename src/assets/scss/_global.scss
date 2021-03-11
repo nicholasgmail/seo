@@ -87,6 +87,24 @@ strong {
     white-space: pre-wrap;
 }
 
+h2 {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: rem-calc(80px);
+        height: 8px;
+        left: 0px;
+        top: -15px;
+        background-image: url(/assets/img/h2-line.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+
 .splide__arrow {
     background: none;
 }
