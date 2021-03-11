@@ -92,10 +92,10 @@ h2 {
     &::before {
         content: "";
         position: absolute;
-        width: rem-calc(80px);
+        width: rem-calc(75px);
         height: 8px;
         left: 0px;
-        top: -15px;
+        top: -10px;
         background-image: url(/assets/img/h2-line.jpg);
         background-position: center;
         background-repeat: no-repeat;

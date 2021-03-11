@@ -10,7 +10,7 @@ var $ready = (callback) => {
     else document.addEventListener("DOMContentLoaded", callback);
 }
 $ready(() => {
-
+    
     //константы
     const $dcElement = document.documentElement;
 
