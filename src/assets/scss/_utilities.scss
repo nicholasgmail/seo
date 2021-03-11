@@ -1,0 +1,64 @@
+/**
+* utilites main
+*/
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+$font-weight-600:             600 !default;
+$utilities: (
+   "opacity": (
+      property: opacity,
+      class: o,
+      values: (
+         0: 0,
+         25: 0.25,
+         50: 0.5,
+         75: 0.75,
+         100: 1,
+      ),
+   ),
+   // Sizing utilities
+   "height":
+      (
+         property: height,
+         class: h,
+         values: (
+            25: 25%,
+            50: 50%,
+            70: 70%,
+            75: 75%,
+            90: 90%,
+            100: 100%,
+            auto: auto,
+         ),
+      ),
+   "width": (
+      property: width,
+      class: w,
+      values: (
+         25: 25%,
+         50: 50%,
+         40: 40%,
+         30: 30%,
+         70: 70%,
+         75: 75%,
+         90: 90%,
+         100: 100%,
+         auto: auto,
+      ),
+   ),
+   "font-weight": (
+      property: font-weight,
+      class: fw,
+      values: (
+        light: $font-weight-light,
+        lighter: $font-weight-lighter,
+        normal: $font-weight-normal,
+        bold: $font-weight-bold,
+        bolder: $font-weight-bolder,
+        600: $font-weight-600,       
+      )
+    ),
+);

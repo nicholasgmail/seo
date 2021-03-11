@@ -5,7 +5,7 @@
 
 /* @import "functions/_functions";
 @import "mixin/_mixin"; */
-@import "settings";
+@import "./settings";
+@import "./utilities";
 
 @import "~bootstrap/scss/bootstrap";
-

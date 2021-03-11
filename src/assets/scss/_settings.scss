@@ -49,46 +49,4 @@ $zindex-tooltip: 1070;
 
 $spacer: 1rem !default;
 
-$utilities: (
-   "opacity": (
-      property: opacity,
-      class: o,
-      values: (
-         0: 0,
-         25: 0.25,
-         50: 0.5,
-         75: 0.75,
-         100: 1,
-      ),
-   ),
-   // Sizing utilities
-   "height":
-      (
-         property: height,
-         class: h,
-         values: (
-            25: 25%,
-            50: 50%,
-            70: 70%,
-            75: 75%,
-            90: 90%,
-            100: 100%,
-            auto: auto,
-         ),
-      ),
-   "width": (
-      property: width,
-      class: w,
-      values: (
-         25: 25%,
-         50: 50%,
-         40: 40%,
-         30: 30%,
-         70: 70%,
-         75: 75%,
-         90: 90%,
-         100: 100%,
-         auto: auto,
-      ),
-   ),
-);
+

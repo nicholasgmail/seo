@@ -2,20 +2,25 @@
     <div class="container-xxl">
         <h2 class="text-start fw-bold">О компании</h2>
         <div class="row">
-            <div class="col-12 col-sm-6">
-                <p>Мечтаете об расширение бизнеса или иметь свободное время, при этом получая больше прибыли, чем
+            <div class="col-12 col-sm-8">
+                <p class="fs-5 fw-600">Мечтаете об расширение бизнеса или иметь свободное время, при этом получая больше прибыли, чем
                     сейчас?</p>
             </div>
         </div>
 
         <div class="row">
+
             {{#repeat 3}}
             <div class="col-6 col-lg-4">
-                <div class="d-flex flex-column">
-                    <img src="assets/img/digital-marketing.png" alt="digital-marketing"
-                        class="img-fluid d-block w-30 me-auto py-3">
-                    <p>Начните продвижение бизнеса в интернете. Только правильное SEO продвижение ИЛИ запуск рекламы
+                <div class="row flex-column">
+                    <div class="col-5 col-sm-4">
+                        <img src="assets/img/digital-marketing.png" alt="digital-marketing"
+                        class="img-fluid d-block me-auto py-3">
+                    </div>
+                    <div class="col-12">
+                        <p>Начните продвижение бизнеса в интернете. Только правильное SEO продвижение ИЛИ запуск рекламы
                         принесет прибыль, а не потратит деньги.</p>
+                    </div>                    
                 </div>
             </div>
             {{/repeat}}
