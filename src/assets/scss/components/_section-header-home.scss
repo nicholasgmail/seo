@@ -38,21 +38,39 @@
    }
    @include media-breakpoint-down(sm) {
       .display-4 {
-         font-size: rem-calc(60px);
+         font-size: rem-calc(55px);
       }
       .splide {
          &__arrow {
-            top: 95.6%;
+            top: 94.6%;
             img {
                width: rem-calc(50px);
             }
          }
          &__arrow--prev {
-            left: 4rem;
+            left: 4em;
             z-index: 2;
          }
          &__arrow--next {
-            right: 4rem;
+            right: 4em;
+            z-index: 2;
+         }
+      }
+   }
+   @media (max-width: 320.98px) {
+      .display-4 {
+         font-size: rem-calc(40px);
+      }
+      .splide {
+         &__arrow {
+            top: 96%;            
+         }
+         &__arrow--prev {
+            left: 1em;
+            z-index: 2;
+         }
+         &__arrow--next {
+            right: 1em;
             z-index: 2;
          }
       }
