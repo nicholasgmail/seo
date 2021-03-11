@@ -11,7 +11,6 @@ var $ready = (callback) => {
 }
 $ready(() => {
 
-
     //константы
     const $dcElement = document.documentElement;
 
