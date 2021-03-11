@@ -1,0 +1,37 @@
+<section class="sct-cases position-relative">
+   <div class="container-xxl py-4">
+      <h2 class="text-start fw-bold">Наши кейсы</h2>
+   </div>
+   <div class="container-xxl px-container-0 pb-4">
+
+      <div id="splide-cases" class="splide">
+         <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+               <img src="./assets/img/arrow_prev.png" alt="prev">
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+               <img src="./assets/img/arrow_next.png" alt="next">
+            </button>
+         </div>
+         <div class="splide__track">
+            <ul class="splide__list">
+               {{#repeat 6}}
+               <li class="splide__slide z-1 p-sm-3">
+                  <div class="card text-white border-0">
+                     <img data-splide-lazy="./assets/img/sct-cases.jpg" class="card-img" alt="">
+                     <div
+                        class="card-img-overlay text-white top-42 top-35 position-absolute start-50 translate-middle w-90">
+                        <h2 class="h5 card-title text-white mb-3">SEO</h2>
+                        <h3 class="card-text text-white">Продвижение в сайта личного
+                           бренда психолога</h3>
+                        <button type="button"
+                           class="btn btn-outline-warning border-2 sct-cases__btn mt-3 text-uppercase p-0">Просмотреть</button>
+                     </div>
+                  </div>
+               </li>
+               {{/repeat}}
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
