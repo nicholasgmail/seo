@@ -90,7 +90,7 @@ strong {
 h2 {
     position: relative;
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         width: rem-calc(80px);
         height: 8px;
@@ -103,8 +103,12 @@ h2 {
     }
 }
 
-
-
 .splide__arrow {
     background: none;
+}
+
+@include media-breakpoint-down(sm) {
+    h2 {
+        font-size: rem-calc(30px);
+    }
 }
