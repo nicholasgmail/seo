@@ -1,38 +1,31 @@
 <section class="section-about-company py-4">
     <div class="container-xxl">
        <h2 class="text-start fw-bold mt-4">О компании</h2>
-       <div class="row">
-           <div class="col-12 col-sm-6">
-               <p>Мечтаете об расширение бизнеса или иметь свободное время, при этом получая больше прибыли, чем сейчас?</p>
-           </div>
-       </div>
-       
-       <div class="row">
-            <div class="col-6 col-lg-4">
-                <div class="d-flex flex-column">
-                    <img src="assets/img/digital-marketing.png" alt="digital-marketing" class="ms-0 py-3">
-                    <p>Начните продвижение бизнеса в интернете. Только правильное SEO продвижение ИЛИ запуск рекламы принесет прибыль, а не потратит деньги.</p>
-                </div>
-            </div>
-            <div class="col-6 col-lg-4">
-                <div class="d-flex flex-column">
-                    <img src="assets/img/digital-marketing.png" alt="digital-marketing" class="ms-0 py-3">
-                    <p>Начните продвижение бизнеса в интернете. Только правильное SEO продвижение ИЛИ запуск рекламы принесет прибыль, а не потратит деньги.</p>
-                </div>
-            </div>
-            <div class="col-6 col-lg-4">
-                <div class="d-flex flex-column">
-                    <img src="assets/img/digital-marketing.png" alt="digital-marketing" class="ms-0 py-3">
-                    <p>Начните продвижение бизнеса в интернете. Только правильное SEO продвижение ИЛИ запуск рекламы принесет прибыль, а не потратит деньги.</p>
-                </div>
-            </div>
 
-       </div>
-       <div class="row justify-content-center">
-            <div class="col-8 col-md-4 pt-4">
-                <button type="button" class="btn btn-outline-warning sct-header__btn text-uppercase w-100 p-0">Заказать SEO продвижение</button>
+        <div class="row">
+
+            {{#repeat 3}}
+            <div class="col-6 col-lg-4">
+                <div class="row flex-column">
+                    <div class="col-5 col-sm-4">
+                        <img src="assets/img/digital-marketing.png" alt="digital-marketing"
+                        class="img-fluid d-block me-auto py-3">
+                    </div>
+                    <div class="col-12">
+                        <p>Начните продвижение бизнеса в интернете. Только правильное SEO продвижение ИЛИ запуск рекламы
+                        принесет прибыль, а не потратит деньги.</p>
+                    </div>                    
+                </div>
+            </div>
+            {{/repeat}}
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-9 col-md-4 pt-4">
+                <button type="button"
+                    class="btn btn-warning sct-header__btn text-white text-uppercase w-100 p-0">Заказать
+                    SEO продвижение</button>
                 <p class="text-center pt-3">Оставляйте заявку и мы с вами свяжемся в течении 2-х часов</p>
             </div>
-       </div>
+        </div>
     </div>
- </section>
+</section>
