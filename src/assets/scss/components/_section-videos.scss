@@ -1,0 +1,28 @@
+.sct-videos {
+    .card {
+        &:hover {
+            cursor: pointer;
+            path {
+                fill: purple;
+                //fill: linear-gradient(180deg, rgba(114, 9, 131, 0.77) 0%, rgba(191, 2, 155, 0.77) 100%);
+            }     
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            background: #000;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.78;
+            z-index: 0;
+        }
+        svg {
+            width: 8%;
+            margin: auto;
+            top: 0; left: 0; bottom: 0; right: 0;
+        }
+
+     }
+}

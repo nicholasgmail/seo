@@ -1,0 +1,63 @@
+<section class="sct-videos bg-light py-4">
+    <div class="container-xxl pt-4">
+        <h2 class="text-start fw-bold">Видео наших специалистов</h2>
+
+        <div class="row pt-3">
+
+            <div class="col-6">
+                <div class="card position-relative">
+                    <img src="./assets/img/sct-videos.jpg" class="w-100" alt="bg-video">
+                    <svg class="position-absolute" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                            <path d="M35.389 0C15.8442 0 0 15.8442 0 35.389C0 54.9338 15.8442 70.778 35.389 70.778C54.9338 70.778 70.778 54.9338 70.778 35.389C70.7572 15.8529 54.9252 0.0208839 35.389 0ZM50.2927 36.5166C50.0477 37.008 49.6494 37.4064 49.1578 37.6514V37.664L28.9356 47.7752C27.6867 48.3992 26.1685 47.8928 25.5444 46.6439C25.367 46.2889 25.2756 45.897 25.2778 45.5002V25.2779C25.2772 23.8818 26.4083 22.7497 27.8044 22.7489C28.1971 22.7488 28.5844 22.84 28.9356 23.0155L49.1578 33.1267C50.4073 33.7494 50.9155 35.2671 50.2927 36.5166Z" fill="white"/>
+                        </g>
+                        <defs><clipPath id="clip0"><rect width="70.7781" height="70.7781" fill="white"/></clipPath></defs>
+                    </svg>
+                        
+                </div>
+            </div>
+
+            <div class="col-6 d-flex align-items-center">
+                <div class="">
+                    <h3 class="w-100">Почему стоит заказать у нас:</h3>
+                    <p>Улучшение ранжирования сайта в результатах выдачи поисковых систем;
+                        Ранжирование сайта на Google Картах, размещение в Google My Business и формирование;
+                        Развитие бренда и повышение лояльности;
+                        Эффективный канал продвижения;
+                    </p>
+                </div>
+            </div>
+
+        </div>
+ 
+       <div id="splide-videos" class="splide">
+          <div class="splide__arrows">
+             <button class="splide__arrow splide__arrow--prev">
+                <img src="./assets/img/arrow_prev.png" alt="prev">
+             </button>
+             <button class="splide__arrow splide__arrow--next">
+                <img src="./assets/img/arrow_next.png" alt="next">
+             </button>
+          </div>
+          <div class="splide__track">
+             <ul class="splide__list">
+                {{#repeat 6}}
+                <li class="splide__slide z-1 p-sm-3">
+                   <div class="card text-white border-0">
+                      <img data-splide-lazy="./assets/img/sct-cases.jpg" class="card-img" alt="">
+
+                      <svg class="position-absolute" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                            <path d="M35.389 0C15.8442 0 0 15.8442 0 35.389C0 54.9338 15.8442 70.778 35.389 70.778C54.9338 70.778 70.778 54.9338 70.778 35.389C70.7572 15.8529 54.9252 0.0208839 35.389 0ZM50.2927 36.5166C50.0477 37.008 49.6494 37.4064 49.1578 37.6514V37.664L28.9356 47.7752C27.6867 48.3992 26.1685 47.8928 25.5444 46.6439C25.367 46.2889 25.2756 45.897 25.2778 45.5002V25.2779C25.2772 23.8818 26.4083 22.7497 27.8044 22.7489C28.1971 22.7488 28.5844 22.84 28.9356 23.0155L49.1578 33.1267C50.4073 33.7494 50.9155 35.2671 50.2927 36.5166Z" fill="white"/>
+                        </g>
+                        <defs><clipPath id="clip0"><rect width="70.7781" height="70.7781" fill="white"/></clipPath></defs>
+                    </svg>
+
+                   </div>
+                </li>
+                {{/repeat}}
+             </ul>
+          </div>
+       </div>
+    </div>
+ </section>

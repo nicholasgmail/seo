@@ -26,6 +26,23 @@ const $splide = function () {
          },
       }
    }).mount();
+   new Splide('#splide-videos', {
+      type: 'loop',
+      lazyLoad: true,
+      autoplay: false,
+      width: '100%',
+      perPage: 3,
+      breakpoints: {
+         576: {
+            perPage: 1,
+            gap: 8,
+            padding: {
+               left: '2rem',
+               right: '2rem',
+            }
+         },
+      }
+   }).mount();
 }
 
 export default $splide;
