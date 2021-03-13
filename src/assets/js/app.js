@@ -3,7 +3,6 @@ import $imgAddClass from "./lib/img-add-class";
 import $scroll from "./lib/scroll";
 import { $scrollTo } from "./lib/scroll-back";
 import $hamburger from "./lib/hamburger";
-import $splide from "./lib/splider";
 
 var $ready = (callback) => {
     if (document.readyState != "loading") callback();
