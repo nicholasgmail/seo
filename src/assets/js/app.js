@@ -10,7 +10,7 @@ var $ready = (callback) => {
     else document.addEventListener("DOMContentLoaded", callback);
 }
 $ready(() => {
-    
+
     //константы
     const $dcElement = document.documentElement;
 
@@ -18,40 +18,92 @@ $ready(() => {
     $imgAddClass();
     $scroll();
     $hamburger();
-    $splide();
+    //$splide();
     // let $collapseMenu = document.querySelector('#collapseMenu');
-    let $clMenu = document.getElementById('collapseMenu')
-    let $linkCollapse = document.querySelector('.nav-link__collapse');
+    let $clMenu = [].slice.call(document.querySelectorAll('.collapse'));
+    let $linkCollapse = [].slice.call(document.querySelectorAll('.nav-link__collapse'));
+    let $navLink = [].slice.call(document.querySelectorAll('.nav-link__top'));
 
-    if ($linkCollapse) {
+
+    /* $linkCollapse.map(function (el) {
+        el.addEventListener('mouseover', function (ev) {
+            let $c = this.getAttribute('href');
+            $clMenu.map(function (el) {
+                if (el.hasAttributes('id') && el.classList.contains('show')) {
+                    let $get_id = el.getAttribute('id')
+                    if ($get_id !== $c)
+                        el.classList.toggle('show');
+                }
+            })
+            if (this.classList.contains('nav-link__collapse')) {
+                document.querySelector($c).classList.toggle('show');
+            }
+        })
+    }) */
+
+    $navLink.map(function (el) {
+        el.addEventListener('mouseover', function (ev) {
+            if (!this.classList.contains('nav-link__collapse')) {
+                $clMenu.map(function (el) {
+                    el.classList.remove('show');
+                })
+            }
+
+            if (this.classList.contains('nav-link__collapse')) {
+                let $c = this.getAttribute('href');
+                $clMenu.map(function (el) {
+                    if (el.hasAttributes('id') && el.classList.contains('show')) {
+                        let $get_id = el.getAttribute('id')
+                        if ($get_id !== $c)
+                            el.classList.toggle('show');
+                    }
+                })
+                if (this.classList.contains('nav-link__collapse')) {
+                    document.querySelector($c).classList.toggle('show');
+                }
+            }
+        })
+        if (el.classList.contains('nav-link__collapse')) {
+            el.addEventListener("click", function () {
+                const $dataLink = this.getAttribute('data-link');
+                window.location.replace($dataLink);
+            });
+        }
+        return false;
+    })
+
+    /* if ($linkCollapse) {
         $linkCollapse.addEventListener("mouseover", function () {
             let $c = this.getAttribute('href');
-            let $elCollap = [].slice.call(document.querySelectorAll($c));
+            let $elCollap = [].slice.call(document.querySelector($c));
             $elCollap.map(function (collapseEl) {
                 //collapseEl.classList.toggle('show');
                 return new bootstrap.Collapse(collapseEl)
             })
         })
-    }
+    } */
     /* $(".navbar-nav a.nav-link__collapse").hover(function () {
          var colaps = $(this).attr("href");
          if (colaps && colaps !== "#") {
              $(colaps).collapse("show");
          }
      });*/
-    const $navNav = document.querySelector(".navbar-nav a.nav-link__collapse");
+    /* const $navNav = document.querySelector(".navbar-nav a.nav-link__collapse");
     if ($navNav) {
         $navNav.addEventListener("click", function () {
             const $dataLink = this.getAttribute('data-link');
             window.location.replace($dataLink);
         });
-    }
+    } */
 
     if ($clMenu) {
-        $clMenu.addEventListener('mouseleave', function () {
-            setTimeout(() => {
-                this.classList.toggle('show');
-            }, 500);
+        $clMenu.map(function (collapseEl) {
+            collapseEl.addEventListener('mouseleave', function () {
+                setTimeout(() => {
+                    this.classList.remove('show');
+                }, 500);
+            })
+            return false;
         })
     }
     /*  $("#collapseMenu").on("mouseleave", function () {
@@ -59,13 +111,17 @@ $ready(() => {
               $(this).collapse("hide");
           }, 500);
       });*/
-    document.addEventListener('click', function (event) {
+    /* document.addEventListener('click', function (event) {
         let $d = event.target;
-        if (!$d.closest('#collapseMenu') && $clMenu.classList.contains('show')) {
-            $clMenu.classList.toggle('show');
-            return false;
+        if ($clMenu) {
+            $clMenu.map(function (collapseEl) {
+                if (!$d.closest('#collapseMenu') && collapseEl.classList.contains('show')) {
+                    collapseEl.classList.toggle('show');
+                    return false;
+                }
+            })
         }
-    }, true);
+    }, true); */
     /* document.addEventListener('mouseover', function (event) {
          let $d = event.target;
          let $navItem = $d.closest('.nav-item');
@@ -78,10 +134,14 @@ $ready(() => {
         event.preventDefault;
         var $scrollTop = document.scrollingElement.scrollTop;
         const $itemColapse = document.querySelector(".nav-item .collapse")
-        if ($scrollTop >= $itemColapse.clientHeight && $clMenu.classList.contains('show')) {
-            //$("#collapseMenu").collapse("hide");
-            $clMenu.classList.toggle('show');
-            return false;
+        if ($clMenu) {
+            $clMenu.map(function (collapseEl) {
+                if ($scrollTop >= $itemColapse.clientHeight && collapseEl.classList.contains('show')) {
+                    //$("#collapseMenu").collapse("hide");
+                    collapseEl.classList.remove('show');
+                    return false;
+                }
+            })
         }
     });
 
