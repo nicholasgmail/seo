@@ -1,0 +1,18 @@
+.section-our-team {
+    .card-our-team {
+        .card-bg {
+            width: 100%;
+            z-index: 1000;
+            left: 25px;
+            bottom: 25px;
+        }
+
+        .card-foto {
+            //position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1050;
+    
+        }
+    }
+}
