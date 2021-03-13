@@ -39,3 +39,4 @@ PATHS:
     - './src/assets/js/form_modal.js'
     - './src/assets/js/video_modal.js'
     - './src/assets/js/form_css.js'
+    - './src/assets/js/splider.js'
