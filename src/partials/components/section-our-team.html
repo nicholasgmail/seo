@@ -1,18 +1,21 @@
-<section class="section-our-team py-4">
+<section class="sct-our-team py-4">
     <div class="container-xxl">
-       <h2 class="text-start fw-bold mt-4 pb-3">Наша команда</h2>
-
+        <h2 class="text-start fw-bold mt-4 pb-3">Наша команда</h2>
         <div class="row">
             {{#repeat 8}}
-            <div class="col-12 col-sm-6 col-lg-3 p-4">
-                <div class="card-our-team position-relative">
-
-                    <img src="assets/img/foto-1.jpg" class="card-foto position-absolute" alt="foto-1">
-
-                    <img src="assets/img/bg-foto.jpg" class="card-bg position-relative" alt="bg-card">
-
+            <div class="col-6 col-md-3">
+                <div class="card border-0 bg-transparent">
+                    <div class="card-body card-photo position-relative ps-0 pb-0 pt-3 pe-3">
+                        <!-- <div class="pt-3 pe-3 position-absolute bottom-0 start-0"> -->
+                        <!-- <div class="pt-3 pe-3 position-absolute bottom-0 start-0">
+                            <img src="assets/img/bg-foto.jpg" class="img-fluid d-block m-auto" alt="bg-card">                            
+                        </div> -->
+                        <img src="assets/img/foto-1.jpg" class="img-fluid d-block m-auto z-1" alt="foto-1">
+                    </div>
+                    <div class="card-body">
+                        <p class="h5 text-center fw-bold">Антон С. - Руководитель</p>
+                    </div>
                 </div>
-                <p class="h5 text-center fw-bold pt-3">Антон С. - Руководитель</p>
             </div>
             {{/repeat}}
         </div>
