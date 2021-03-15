@@ -1,0 +1,47 @@
+.sct-header-cases {
+    h1 {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: rem-calc(75px);
+            height: 8px;
+            left: 0px;
+            top: -10px;
+            background-image: url(/assets/img/h2-line.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    .card {
+        &:hover {
+            path {
+                fill: #C758B7;
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(180deg, rgba(29, 27, 27, 0.23) 25.47%, rgba(0, 0, 0, 0.85) 75.88%);
+
+        }
+        a {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        img {
+            width: 100%;
+            height: 204px;
+            object-fit: none;
+        }
+    }
+    
+} 
