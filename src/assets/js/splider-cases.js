@@ -1,17 +1,10 @@
-new Splide('#splide-header', {
-   type: 'loop',
-   autoplay: true,
-   width: '100%',
-   height: '41.8rem',
-   perPage: 1,
-}).mount();
-
-new Splide('#splide-cases', {
+new Splide('#website-promotion-splide', {
    type: 'loop',
    lazyLoad: true,
-   autoplay: true,
+   autoplay: false,
+   pagination: false,
    width: '100%',
-   perPage: 2,
+   perPage: 1,
    breakpoints: {
       576: {
          perPage: 1,
@@ -23,12 +16,13 @@ new Splide('#splide-cases', {
       },
    }
 }).mount();
-new Splide('#splide-videos', {
+new Splide('#development-cases-splide', {
    type: 'loop',
    lazyLoad: true,
    autoplay: false,
+   pagination: false,
    width: '100%',
-   perPage: 3,
+   perPage: 1,
    breakpoints: {
       576: {
          perPage: 1,
