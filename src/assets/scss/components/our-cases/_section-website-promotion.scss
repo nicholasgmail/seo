@@ -1,0 +1,36 @@
+.sct-website-promotion {
+   .splide {
+       .card {
+           h4 {
+               margin-top: 1rem;
+           }
+           .card-left {
+               ul {
+                   padding-left: 0;
+                    li {
+                        list-style-type: none; 
+                    }
+                        li::before {
+                        color: #FFC107; 
+                        content: "●"; 
+                        padding-right: 10px;
+                        
+                    }
+ 
+               }
+           }
+           .card-right {
+               &__bg {
+                background: #5A117D;
+               }
+               
+                h4, p {
+                    color: white;
+                }
+                img {
+                    width: 100%;
+                }
+           }
+       }
+   }     
+} 
