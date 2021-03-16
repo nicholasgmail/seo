@@ -1,0 +1,36 @@
+.sct-development-cases {
+   .splide {
+       .card {
+           h4 {
+               margin-top: 1rem;
+           }
+           img {
+                width: 100%;
+            }
+            ul {
+                padding-left: 0;
+                 li {
+                     list-style-type: none; 
+                 }
+                     li::before {
+                     color: #FFC107; 
+                     content: "●"; 
+                     padding-right: 10px;
+                     
+                 }
+            }
+           .card-left {
+               img {
+                border: 1px solid rgba(22,22,22,.125);
+                border-radius: 4px;
+               }
+           }
+           .card-right {
+               img {
+                border: 1px solid #5A117D;
+                border-radius: 4px;
+               }
+           }
+       }
+   }     
+} 
