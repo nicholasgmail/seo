@@ -86,6 +86,10 @@ strong {
 .wrap-spacer {
     white-space: pre-wrap;
 }
+.sct-header__btn {
+    height: 4.5rem;
+    white-space: nowrap;
+}
 
 h2 {
     position: relative;
@@ -96,7 +100,7 @@ h2 {
         height: 8px;
         left: 0px;
         top: -10px;
-        background-image: url(/assets/img/h2-line.jpg);
+        background-image: url(../img/h2-line.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
