@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 new Splide('#website-promotion-splide', {
    type: 'loop',
    lazyLoad: true,
@@ -36,6 +37,9 @@ new Splide('#development-cases-splide', {
 }).mount();
 
 /*function addStyleArrow() {
+=======
+function addStyleArrow() {
+>>>>>>> 1db2a2cc11ad4b633a0a46fc68dce23d3df35e45
    let arrow_prev = document.querySelectorAll('.splide__arrow--prev');
    let arrow_next = document.querySelectorAll('.splide__arrow--next');
 
@@ -46,4 +50,52 @@ new Splide('#development-cases-splide', {
       item.style.right = '-0.3em';
    });
 }
+<<<<<<< HEAD
 addStyleArrow();*/
+=======
+addStyleArrow();
+
+const $splWebProm = document.getElementById('website-promotion-splide');
+const $splDevCases = document.getElementById('development-cases-splide');
+
+if ($splWebProm) {
+   new Splide('#website-promotion-splide', {
+      type: 'loop',
+      lazyLoad: true,
+      autoplay: false,
+      pagination: false,
+      width: '100%',
+      perPage: 1,
+      breakpoints: {
+         576: {
+            perPage: 1,
+            gap: 8,
+            padding: {
+               left: '2rem',
+               right: '2rem',
+            }
+         },
+      }
+   }).mount();
+}
+if ($splDevCases) {
+   new Splide('#development-cases-splide', {
+      type: 'loop',
+      lazyLoad: true,
+      autoplay: false,
+      pagination: false,
+      width: '100%',
+      perPage: 1,
+      breakpoints: {
+         576: {
+            perPage: 1,
+            gap: 8,
+            padding: {
+               left: '2rem',
+               right: '2rem',
+            }
+         },
+      }
+   }).mount();
+}
+>>>>>>> 1db2a2cc11ad4b633a0a46fc68dce23d3df35e45
