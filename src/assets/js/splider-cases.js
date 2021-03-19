@@ -1,3 +1,16 @@
+function addStyleArrow() {
+   let arrow_prev = document.querySelectorAll('.splide__arrow--prev');
+   let arrow_next = document.querySelectorAll('.splide__arrow--next');
+
+   arrow_prev.forEach(function(item) {
+      item.style.left = '-0.3em';
+   });
+   arrow_next.forEach(function(item) {
+      item.style.right = '-0.3em';
+   });
+}
+addStyleArrow();
+
 new Splide('#website-promotion-splide', {
    type: 'loop',
    lazyLoad: true,
@@ -35,15 +48,3 @@ new Splide('#development-cases-splide', {
    }
 }).mount();
 
-function addStyleArrow() {
-   let arrow_prev = document.querySelectorAll('.splide__arrow--prev');
-   let arrow_next = document.querySelectorAll('.splide__arrow--next');
-
-   arrow_prev.forEach(function(item) {
-      item.style.left = '-0.3em';
-   });
-   arrow_next.forEach(function(item) {
-      item.style.right = '-0.3em';
-   });
-}
-addStyleArrow();
