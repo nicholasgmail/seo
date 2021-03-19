@@ -35,7 +35,7 @@ new Splide('#development-cases-splide', {
    }
 }).mount();
 
-function addStyleArrow() {
+/*function addStyleArrow() {
    let arrow_prev = document.querySelectorAll('.splide__arrow--prev');
    let arrow_next = document.querySelectorAll('.splide__arrow--next');
 
@@ -46,4 +46,4 @@ function addStyleArrow() {
       item.style.right = '-0.3em';
    });
 }
-addStyleArrow();
+addStyleArrow();*/
