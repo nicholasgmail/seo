@@ -1,3 +1,4 @@
+
 const $splHead = document.getElementById('splide-header');
 const $splCases = document.getElementById('splide-cases');
 const $splVideo = document.getElementById('splide-videos');
@@ -48,3 +49,4 @@ if ($splVideo) {
         }
     }).mount();
 }
+

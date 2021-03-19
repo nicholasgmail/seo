@@ -1,4 +1,4 @@
-// style-home.scss
+// style.scss
 // Option B: Include parts of Bootstrap
 
 @charset "utf-8";
@@ -10,8 +10,7 @@
 @import "~bootstrap/scss/mixins/grid";
 @import "~hover.css/scss/options";
 /* @import "~hover.css/scss/mixins";
-@import "~hover.css/scss/hacks";
-//@import "components/lib/card-tariffs";
+@import "~hover.css/scss/hacks"; 
 @import "~bourbon/core/bourbon.scss";*/
 @import "./functions/_functions";
 @import "./mixin/_mixin";
@@ -20,13 +19,9 @@
 @import "components/lib/hamburger/base-hamburger";
 @import "components/lib/hamburger/hamburger";
 @import "components/lib/menu-mobile";
+//@import "components/lib/card-tariffs";
 @import "./components/top-header";
-@import "./components/section-our-services";
-@import "./components/section-you-will-get";
-@import "./components/section-why-order";
-@import "./components/section-our-team";
-@import "./components/section-videos";
+@import "components/our-cases/section-header-cases";
+@import "components/our-cases/section-website-promotion";
+@import "components/our-cases/section--development-cases";
 @import "./components/footer";
-@import "./components/section-header-home";
-@import "./components/section-cases";
-@import "./components/ready-increase-sales2";

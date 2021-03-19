@@ -110,9 +110,36 @@ h2 {
 .splide__arrow {
     background: none;
 }
-
+.h2__center::before{
+    transform: translate(-50%, 20%);
+    left: 50%;
+}
 @include media-breakpoint-down(sm) {
     h2 {
         font-size: rem-calc(30px);
     }
+}
+
+.bg-purple-0{
+    &::before {
+        content: "";
+        position: absolute;
+        background: rgba($purple, .1);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
 }
