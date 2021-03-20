@@ -143,3 +143,17 @@ h2 {
     white-space: nowrap;
     border: 0;
 }
+.h-rem-16{
+    height: 16rem;
+    img{
+        overflow: hidden;
+        object-fit: cover;
+    }
+}
+.h-rem-7{
+    height: 7rem;
+    img{
+        overflow: hidden;
+        object-fit: contain;
+    }
+}
