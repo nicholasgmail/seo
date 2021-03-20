@@ -1,16 +1,3 @@
-function addStyleArrow() {
-   let arrow_prev = document.querySelectorAll('.splide__arrow--prev');
-   let arrow_next = document.querySelectorAll('.splide__arrow--next');
-
-   arrow_prev.forEach(function(item) {
-      item.style.left = '-0.3em';
-   });
-   arrow_next.forEach(function(item) {
-      item.style.right = '-0.3em';
-   });
-}
-addStyleArrow();
-
 const $splWebProm = document.getElementById('website-promotion-splide');
 const $splDevCases = document.getElementById('development-cases-splide');
 
@@ -54,3 +41,13 @@ if ($splDevCases) {
       }
    }).mount();
 }
+
+let exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', function (event) {
+   document.addEventListener('click', function(e) {
+      if (e.target.src) {
+         let imgModal = document.querySelector('#exampleModal img');
+         imgModal.src = e.target.src;
+      }
+   })
+})
