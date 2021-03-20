@@ -1,4 +1,3 @@
-
 const $splWebProm = document.getElementById('website-promotion-splide');
 const $splDevCases = document.getElementById('development-cases-splide');
 
@@ -43,3 +42,12 @@ if ($splDevCases) {
    }).mount();
 }
 
+let exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', function (event) {
+   document.addEventListener('click', function(e) {
+      if (e.target.src) {
+         let imgModal = document.querySelector('#exampleModal img');
+         imgModal.src = e.target.src;
+      }
+   })
+})
