@@ -43,9 +43,9 @@ if ($splDevCases) {
 }
 
 let exampleModal = document.getElementById('exampleModal')
-exampleModal.addEventListener('show.bs.modal', function (event) {
+exampleModal.addEventListener('show.bs.modal', function () {
    document.addEventListener('click', function(e) {
-      if (e.target.src) {
+      if (e.target.hasAttribute('data-bs-toggle')) {
          let imgModal = document.querySelector('#exampleModal img');
          imgModal.src = e.target.src;
       }
