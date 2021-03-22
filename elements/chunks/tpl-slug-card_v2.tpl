@@ -1,7 +1,8 @@
 
-
-
-{var $rows = json_decode($_pls['tv.services-list-price'])}
+{if $id | resource: 'class_key' == 'modSymLink'}
+   <div class="d-none">{$id = $id | resource: 'content'}</div>
+{/if}
+{var $rows = json_decode($id | resource: 'tv.services-list-price')}
 {var $pg_longtitle =  $id | resource: 'longtitle'}
 {var $tv_image =  $id | resource: 'image-page'}
 {var $tv_info =  $id | resource: 'list-info-price'}
@@ -35,7 +36,7 @@
                          </div>
                       {/if}
                          <div class="col">
-                            <a href="{$id | url}"type="button" class="btn btn-outline-warning border-2 w-100">Подробней</a>
+                            <a href="{$id | url}" class="btn btn-outline-warning border-2 w-100">Подробней</a>
                          </div>
                       </div>
                    </div>

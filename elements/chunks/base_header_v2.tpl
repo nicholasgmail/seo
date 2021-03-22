@@ -79,7 +79,7 @@
                         ({$menutitle})</span></a></li>',
                
                'tplParentRow' => '@INLINE  <li class="nav-item nav-expand">
-                  <a class="nav__link nav-expand__link nav__link-ripple-out" href="javascript:;">{$menutitle}</a><span class="sr-only">(current)</span>
+                  <a class="nav__link nav-expand__link nav__link-ripple-out" href="javascript:;">{$menutitle}</a><span class="sr-only">{$menutitle}</span>
                   <ul class="nav-items nav-expand-content list-unstyled"> 
                   <li class="nav-item"><a class="nav__link nav__link-ripple-out"  href="{$parent | url}">{$parent | resource: "menutitle"}<span class="sr-only">
                         {$parent | resource: "menutitle"}</span></a></li>
@@ -155,16 +155,16 @@
                "level" => 2,
                'tplOuter' => '@INLINE {$wrapper}',
                'tpl' => '@INLINE <li class="nav-item p-2 rounded-pill [[+classnames]]"><a
-                     class="nav-link h-6 font-weight-montserrat-700 text-center text-white text-decoration-none"
+                     class="nav-link nav-link__top h-6 font-weight-montserrat-700 text-center text-white text-decoration-none"
                      href="{$link}">{$menutitle}<span class="sr-only">
                         ({$menutitle})</span></a></li>',
                'tplParentRow' => '@INLINE <li class="nav-item p-2 rounded-pill">
-                  <a class="nav-link nav-link__collapse font-raleway-400 text-center text-white text-decoration-none"
-                     data-toggle="collapse" data-link="{$link}" href="#collapseMenu" role="button" aria-expanded="false"
-                     aria-controls="collapseMenu">{$menutitle}</a><span class="sr-only">(current)</span>
-                     <div class="collapse position-absolute z-4 mt-4 w-90" id="collapseMenu" data-collapse-menu style="left: 50%; transform: translate(-50%, 0%);">
-                  <div class="card rounded flex-row py-6 p-3 position-relative flex-wrap">
-                  <div class="position-absolute" style="bottom: 1%;">
+                  <a class="nav-link nav-link__top nav-link__collapse font-raleway-400 text-center text-white text-decoration-none"
+                     data-toggle="collapse" data-link="{$link}" href="#collapseMenu{$id}" role="button" aria-expanded="false"
+                     aria-controls="collapseMenu{$id}">{$menutitle}</a><span class="sr-only">{$menutitle}</span>
+                     <div class="collapse position-absolute z-4 mt-4 w-90" id="collapseMenu{$id}" data-collapse-menu style="left: 50%; transform: translate(-50%, 0%);">
+                  <div class="card rounded flex-row py-6 p-3  pb-5 position-relative flex-wrap">
+                  <div class="position-absolute" style="bottom: 2%;">
                <a class="navbar__logo d-flex flex-wrap-reverse align-items-center font-weight-montserrat-400 font-size-10 text-break "
                   href="{$parent | url}">
                   {if "+logo" | placeholder}
@@ -173,7 +173,7 @@
                      alt="{"+logo-text" | placeholder}" alt="{"+logo-text" | placeholder}" loading="lazy">
                {/if}</a>
             </div>
-                     <a class="collapse__link text-indigo position-absolute fw-bold" href="{2 | url}"><u>Все
+                     <a class="collapse__link text-indigo position-absolute fw-bold" href="{2 | url}"  style="bottom: 2%;"><u>Все
                            услуги</u></a>{$wrapper}</div>
                </div>
                </li>',
