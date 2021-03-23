@@ -39,7 +39,13 @@ $ready(() => {
             }
         })
     }) */
-
+    $linkCollapse.map(function (el) {
+        el.addEventListener("click", function (ev) {
+            ev.preventDefault();
+            const $dataLink = this.getAttribute('data-link');
+            window.location.replace($dataLink);
+        });
+    })
     $navLink.map(function (el) {
         el.addEventListener('mouseover', function (ev) {
             if (!this.classList.contains('nav-link__collapse')) {
@@ -62,12 +68,6 @@ $ready(() => {
                 }
             }
         })
-        if (el.classList.contains('nav-link__collapse')) {
-            el.addEventListener("click", function () {
-                const $dataLink = this.getAttribute('data-link');
-                window.location.replace($dataLink);
-            });
-        }
         return false;
     })
 

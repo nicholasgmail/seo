@@ -1,5 +1,5 @@
 {$_modx->runSnippet('!pdoResources', [
-'parents' => $_modx->resource.id,
+'parents' => 0,
 'depth'=>'0',
 'resources'=>'2',
 'limit'=>'12',
