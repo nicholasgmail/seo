@@ -51,3 +51,21 @@ exampleModal.addEventListener('show.bs.modal', function () {
       }
    })
 })
+ 
+
+/* let imgModal = document.querySelector('#exampleModal img');
+ function openModalImg() {
+   imgModal.src = this.src;
+} 
+let  imagesCases = document.querySelectorAll("img[data-bs-toggle]");
+for (let i = 0; i < imagesCases.length; i++) {
+   imagesCases[i].onclick = openModalImg;
+}  
+ */
+/* let imgModal = document.querySelector('#exampleModal img');
+document.addEventListener('click', function(e) {
+   if (e.target.hasAttribute('data-bs-toggle')) {
+      imgModal.src = e.target.src;
+   }
+})
+ */
